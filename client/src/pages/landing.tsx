@@ -138,6 +138,14 @@ export default function Landing() {
                   Acompaño a mujeres que se encuentran en medio de una crisis espiritual a reconectar con su divinidad, descubrir su misión de vida y transformar el dolor en poder interior.
                 </p>
               </div>
+
+              {/* Video Section */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-celestial-blue/30 to-mystic-purple/30 rounded-3xl blur-2xl"></div>
+                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+                  <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
+                </div>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -148,10 +156,10 @@ export default function Landing() {
                 </Button>
                 <Button 
                   variant="outline"
-                  onClick={() => scrollToSection('video-section')}
+                  onClick={() => scrollToSection('transformation')}
                   className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
                 >
-                  Ver Video de Bienvenida
+                  Conoce el Proceso
                 </Button>
               </div>
 
@@ -192,26 +200,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section id="video-section" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
-              Un mensaje especial para ti
-            </h2>
-            <p className="text-xl text-white/95">
-              Descubre cómo iniciar tu transformación espiritual
-            </p>
-          </div>
-          
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-celestial-blue/30 to-mystic-purple/30 rounded-3xl blur-2xl"></div>
-            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-              <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Transformation Journey */}
       <section id="transformation" className="py-20 px-4">
