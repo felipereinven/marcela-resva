@@ -23,8 +23,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Integrate with MailerLite API
       try {
-        const mailerLiteApiKey = process.env.MAILERLITE_API_KEY || process.env.VITE_MAILERLITE_API_KEY || "default_key";
-        const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID || process.env.VITE_MAILERLITE_GROUP_ID || "default_group";
+        const mailerLiteApiKey = process.env.MAILERLITE_API_KEY || process.env.VITE_MAILERLITE_API_KEY;
+        const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID || process.env.VITE_MAILERLITE_GROUP_ID || "160033952049923407";
 
         const mailerLiteResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
           method: 'POST',
@@ -39,8 +39,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               name: validatedData.firstName,
               last_name: validatedData.lastName || '',
               current_moment: validatedData.currentMoment || ''
-            },
-            groups: [mailerLiteGroupId]
+            }
           })
         });
 
@@ -49,6 +48,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
           // Update subscriber with MailerLite ID
           await storage.updateSubscriberMailerLiteId(validatedData.email, mailerLiteData.data.id);
           console.log('Subscriber added to MailerLite successfully');
+          
+          // Add subscriber to the group
+          const assignToGroupResponse = await fetch(`https://connect.mailerlite.com/api/subscribers/${mailerLiteData.data.id}/groups/${mailerLiteGroupId}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${mailerLiteApiKey}`,
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (assignToGroupResponse.ok) {
+            console.log('Subscriber added to group successfully');
+          } else {
+            console.error('Failed to add subscriber to group:', await assignToGroupResponse.text());
+          }
         } else {
           console.error('MailerLite API error:', await mailerLiteResponse.text());
         }

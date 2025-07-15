@@ -42,7 +42,9 @@ export class MemStorage implements IStorage {
   async createSubscriber(insertSubscriber: InsertSubscriber): Promise<Subscriber> {
     const id = this.currentSubscriberId++;
     const subscriber: Subscriber = { 
-      ...insertSubscriber, 
+      ...insertSubscriber,
+      lastName: insertSubscriber.lastName || null,
+      currentMoment: insertSubscriber.currentMoment || null,
       id,
       subscribedAt: new Date(),
       mailerLiteId: null

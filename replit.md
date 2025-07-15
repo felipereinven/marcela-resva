@@ -111,3 +111,25 @@ Preferred communication style: Simple, everyday language.
 - Prepared for production database provisioning
 
 The application follows a spiritual wellness theme with purple/blue gradients, mystical animations, and Spanish language content targeting Latin American women seeking spiritual transformation.
+
+## Recent Changes: Latest modifications with dates
+
+### July 15, 2025 - MailerLite Integration & Enhanced Landing Page
+- ✅ Successfully integrated MailerLite API for newsletter subscriptions
+- ✅ Created "Shifting Souls Community" group in MailerLite (ID: 160033952049923407)
+- ✅ Updated landing page with modern spiritual design and purple gradients
+- ✅ Added Vimeo video integration (videos 1101675966 and 1101676211)
+- ✅ Implemented responsive newsletter signup form with validation
+- ✅ Created thank you page with WhatsApp group redirection
+- ✅ Fixed CSS import issues and TypeScript errors
+- ✅ Added particle background animations for spiritual ambiance
+- ✅ Newsletter form captures: firstName, lastName, email, currentMoment
+- ✅ API successfully creates subscribers in both local storage and MailerLite
+- ✅ Proper error handling for duplicate emails and validation
+
+### Current Status
+- Landing page fully functional with spiritual theme
+- Newsletter subscription working with MailerLite sync
+- Videos embedded and displaying properly
+- WhatsApp integration ready (URL needs to be updated with actual group link)
+- All forms validated and working correctly
