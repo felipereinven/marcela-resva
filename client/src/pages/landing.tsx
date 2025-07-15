@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { ParticleBackground } from "@/components/ui/particles";
 import { VimeoPlayer } from "@/components/ui/vimeo-player";
+import marcelaLogo from "@/assets/marcela-resva-logo.webp";
 
 const subscriptionSchema = z.object({
   firstName: z.string().min(1, "El nombre es requerido"),
@@ -90,27 +91,29 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 font-poppins">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 font-poppins">
       <ParticleBackground />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 transition-all duration-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/15 backdrop-blur-xl border-b border-white/30 transition-all duration-300 shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center">
-                <i className="fas fa-feather-alt text-white text-lg"></i>
-              </div>
+              <img 
+                src={marcelaLogo} 
+                alt="Marcela ResVa Logo" 
+                className="h-10 w-auto"
+              />
               <h1 className="text-2xl font-cormorant font-bold text-white">Shifting Souls</h1>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors">
+              <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium">
                 Sobre Mí
               </button>
-              <button onClick={() => scrollToSection('transformation')} className="text-white/80 hover:text-white transition-colors">
+              <button onClick={() => scrollToSection('transformation')} className="text-white/90 hover:text-white transition-colors font-medium">
                 Transformación
               </button>
-              <button onClick={() => scrollToSection('community')} className="text-white/80 hover:text-white transition-colors">
+              <button onClick={() => scrollToSection('community')} className="text-white/90 hover:text-white transition-colors font-medium">
                 Comunidad
               </button>
             </div>
@@ -132,7 +135,7 @@ export default function Landing() {
                   </span>
                   {" "}en el amanecer de tu propósito
                 </h1>
-                <p className="text-xl text-white/80 leading-relaxed">
+                <p className="text-xl text-white/95 leading-relaxed">
                   Acompaño a mujeres que se encuentran en medio de una crisis espiritual a reconectar con su divinidad, descubrir su misión de vida y transformar el dolor en poder interior.
                 </p>
               </div>
@@ -156,22 +159,22 @@ export default function Landing() {
               <div className="flex items-center space-x-8 pt-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-warm-gold">3000+</div>
-                  <div className="text-white/70 text-sm">Almas transformadas</div>
+                  <div className="text-white/90 text-sm font-medium">Almas transformadas</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-warm-gold">30</div>
-                  <div className="text-white/70 text-sm">Días para cambiar</div>
+                  <div className="text-white/90 text-sm font-medium">Días para cambiar</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-warm-gold">24/7</div>
-                  <div className="text-white/70 text-sm">Apoyo divino</div>
+                  <div className="text-white/90 text-sm font-medium">Apoyo divino</div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-warm-gold/30 to-rose-gold/30 rounded-3xl blur-2xl"></div>
-              <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+              <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
                   alt="Spiritual meditation space" 
@@ -179,10 +182,10 @@ export default function Landing() {
                 />
                 
                 <div className="mt-6 text-center">
-                  <p className="text-white/90 font-medium">
+                  <p className="text-white font-medium text-lg">
                     "Mi proceso de sanación me mostró que renacer es posible"
                   </p>
-                  <p className="text-warm-gold font-dancing text-lg mt-2">- Marcela</p>
+                  <p className="text-warm-gold font-dancing text-xl mt-2">- Marcela</p>
                 </div>
               </div>
             </div>
@@ -197,14 +200,14 @@ export default function Landing() {
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Un mensaje especial para ti
             </h2>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-white/95">
               Descubre cómo iniciar tu transformación espiritual
             </p>
           </div>
           
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-celestial-blue/30 to-mystic-purple/30 rounded-3xl blur-2xl"></div>
-            <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
             </div>
           </div>
@@ -218,43 +221,43 @@ export default function Landing() {
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Tu Viaje de Transformación
             </h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-xl text-white/95 max-w-2xl mx-auto">
               En 30 días comenzarás a tomar decisiones coherentes, recuperar la confianza y dar pasos concretos hacia la vida que tu alma anhela.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-moon text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Reconoce tu Noche Oscura</h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/95 leading-relaxed">
                   Identifica las señales de tu alma pidiendo transformación. Abraza la oscuridad como el primer paso hacia tu amanecer.
                 </p>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-celestial-blue to-mystic-teal rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-feather-alt text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Conecta con tu Divinidad</h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/95 leading-relaxed">
                   Fortalece tu conexión con los ángeles y tu guía interior. Aprende a escuchar las señales divinas que siempre han estado ahí.
                 </p>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-mystic-purple to-rose-gold rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-sun text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Manifiesta tu Propósito</h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/95 leading-relaxed">
                   Descubre tu misión de vida y crea una existencia alineada con tu alma. Transforma el dolor en poder interior.
                 </p>
               </div>
@@ -270,7 +273,7 @@ export default function Landing() {
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Lo que recibirás en Shifting Souls
             </h2>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-white/95">
               Una comunidad sagrada por solo <span className="text-warm-gold font-bold">$33.99/mes</span>
             </p>
           </div>
@@ -284,12 +287,12 @@ export default function Landing() {
               { icon: "fas fa-book", title: "Recursos Exclusivos", description: "Libros, cursos y descuentos especiales para miembros" },
               { icon: "fas fa-calendar-star", title: "Eventos Presenciales", description: "Talleres y retiros para profundizar tu conexión espiritual" }
             ].map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="flex items-center mb-4">
                   <i className={`${item.icon} text-warm-gold text-xl mr-3`}></i>
                   <h3 className="text-white font-semibold">{item.title}</h3>
                 </div>
-                <p className="text-white/80 text-sm">{item.description}</p>
+                <p className="text-white/95 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
@@ -303,12 +306,12 @@ export default function Landing() {
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Comienza tu transformación hoy
             </h2>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-white/95">
               Únete a nuestra comunidad y recibe contenido exclusivo para iniciar tu despertar espiritual
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+          <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -317,7 +320,7 @@ export default function Landing() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/80">Nombre *</FormLabel>
+                        <FormLabel className="text-white/95 font-medium">Nombre *</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
@@ -334,7 +337,7 @@ export default function Landing() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/80">Apellido</FormLabel>
+                        <FormLabel className="text-white/95 font-medium">Apellido</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
@@ -353,7 +356,7 @@ export default function Landing() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/80">Email *</FormLabel>
+                      <FormLabel className="text-white/95 font-medium">Email *</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
@@ -372,7 +375,7 @@ export default function Landing() {
                   name="currentMoment"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/80">¿Qué te resuena más de tu momento actual?</FormLabel>
+                      <FormLabel className="text-white/95 font-medium">¿Qué te resuena más de tu momento actual?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="bg-white/20 border-white/30 text-white focus:ring-warm-gold/50">
