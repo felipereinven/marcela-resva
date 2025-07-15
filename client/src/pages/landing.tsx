@@ -185,7 +185,7 @@ export default function Landing() {
                   <img 
                     src={marcelaPhoto} 
                     alt="Marcela - Transformación espiritual" 
-                    className="w-full h-96 object-cover object-center rounded-2xl" 
+                    className="w-full h-[500px] object-cover object-top rounded-2xl" 
                   />
                   
                   <div className="mt-6 text-center">
