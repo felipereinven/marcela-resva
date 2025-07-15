@@ -133,3 +133,6 @@ The application follows a spiritual wellness theme with purple/blue gradients, m
 - Videos embedded and displaying properly
 - WhatsApp integration ready (URL needs to be updated with actual group link)
 - All forms validated and working correctly
+- Single-column hero layout with centered content
+- Marcela's personal photo integrated in testimonial section
+- Improved color contrast for better accessibility

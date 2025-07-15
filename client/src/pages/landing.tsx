@@ -15,6 +15,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { ParticleBackground } from "@/components/ui/particles";
 import { VimeoPlayer } from "@/components/ui/vimeo-player";
 import marcelaLogo from "@/assets/marcela-resva-logo.webp";
+import marcelaPhoto from "@/assets/22_1752622341890.jpg";
 
 const subscriptionSchema = z.object({
   firstName: z.string().min(1, "El nombre es requerido"),
@@ -122,9 +123,8 @@ export default function Landing() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-20 px-4 relative z-10">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="space-y-8 text-center">
               <div className="space-y-6">
                 <h2 className="text-xl font-dancing text-warm-gold">Bienvenida al despertar</h2>
                 <h1 className="text-5xl lg:text-6xl font-cormorant font-bold text-white leading-tight">
@@ -163,7 +163,7 @@ export default function Landing() {
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-8 pt-6">
+              <div className="flex items-center justify-center space-x-8 pt-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-warm-gold">3000+</div>
                   <div className="text-white/90 text-sm font-medium">Almas transformadas</div>
@@ -177,25 +177,25 @@ export default function Landing() {
                   <div className="text-white/90 text-sm font-medium">Apoyo divino</div>
                 </div>
               </div>
-            </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-warm-gold/30 to-rose-gold/30 rounded-3xl blur-2xl"></div>
-              <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                  alt="Spiritual meditation space" 
-                  className="w-full h-80 object-cover rounded-2xl" 
-                />
-                
-                <div className="mt-6 text-center">
-                  <p className="text-white font-medium text-lg">
-                    "Mi proceso de sanación me mostró que renacer es posible"
-                  </p>
-                  <p className="text-warm-gold font-dancing text-xl mt-2">- Marcela</p>
+              {/* Testimonial Section */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-warm-gold/30 to-rose-gold/30 rounded-3xl blur-2xl"></div>
+                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+                  <img 
+                    src={marcelaPhoto} 
+                    alt="Marcela - Transformación espiritual" 
+                    className="w-full h-80 object-cover rounded-2xl" 
+                  />
+                  
+                  <div className="mt-6 text-center">
+                    <p className="text-white font-medium text-lg">
+                      "Mi proceso de sanación me mostró que renacer es posible"
+                    </p>
+                    <p className="text-warm-gold font-dancing text-xl mt-2">- Marcela</p>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
