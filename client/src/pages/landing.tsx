@@ -122,7 +122,7 @@ export default function Landing() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-8 px-4 relative z-10">
+      <section className="pt-24 pb-4 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-center">
               <div className="space-y-6">
@@ -200,12 +200,10 @@ export default function Landing() {
         </div>
       </section>
 
-
-
       {/* Transformation Journey */}
-      <section id="transformation" className="py-8 px-4">
+      <section id="transformation" className="py-4 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Tu Viaje de Transformación
             </h2>
@@ -255,9 +253,9 @@ export default function Landing() {
       </section>
 
       {/* What You Get */}
-      <section id="community" className="py-8 px-4 bg-gradient-to-r from-white/5 to-white/10">
+      <section id="community" className="py-4 px-4 bg-gradient-to-r from-white/5 to-white/10">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Lo que recibirás en Shifting Souls
             </h2>
@@ -288,9 +286,9 @@ export default function Landing() {
       </section>
 
       {/* Newsletter Signup */}
-      <section id="newsletter-signup" className="py-8 px-4">
+      <section id="newsletter-signup" className="py-4 px-4">
         <div className="container mx-auto max-w-2xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
               Comienza tu transformación hoy
             </h2>
