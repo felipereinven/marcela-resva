@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelaresva.com - Shifting Souls | Próximamente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ocultar el título "Coming Soon" de WordPress */
+        .wp-block-post-title {
+            display: none !important;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .footer-credit {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Partículas flotantes */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            min-height: calc(100vh - 120px);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8b5a9f;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .angel-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(102, 126, 234, 0.5); }
+        }
+
+        .main-text {
+            font-size: 1.4rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        .countdown-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #667eea;
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            color: #8b5a9f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        .launch-message {
+            font-size: 2rem;
+            color: #667eea;
+            font-weight: 600;
+            margin: 40px 0;
+            font-family: 'Cormorant Garamond', serif;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .feature-text {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        
+        /* Large Desktop (1200px+) */
+        @media (min-width: 1200px) {
+            .content {
+                max-width: 900px;
+                padding: 80px 80px;
+            }
+            
+            .logo h1 {
+                font-size: 4rem;
+            }
+            
+            .main-text {
+                font-size: 1.6rem;
+            }
+            
+            .countdown-number {
+                font-size: 3rem;
+            }
+            
+            .features {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                margin: 50px 0;
+            }
+            
+            .description {
+                max-width: 650px;
+                font-size: 1.1rem;
+            }
+            
+            .countdown {
+                gap: 40px;
+                margin: 50px 0;
+            }
+        }
+
+        /* Desktop (992px - 1199px) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .content {
+                max-width: 800px;
+                padding: 70px 60px;
+            }
+            
+            .logo h1 {
+                font-size: 3.5rem;
+            }
+            
+            .features {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
+                margin: 45px 0;
+            }
+            
+            .description {
+                max-width: 600px;
+                font-size: 1.05rem;
+            }
+            
+            .countdown {
+                gap: 35px;
+                margin: 45px 0;
+            }
+        }
+
+        /* Tablet (768px - 991px) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .content {
+                max-width: 500px;
+                padding: 50px 35px;
+            }
+            
+            .logo h1 {
+                font-size: 3rem;
+            }
+            
+            .main-text {
+                font-size: 1.3rem;
+            }
+            
+            .countdown {
+                gap: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2.2rem;
+            }
+            
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* Small Tablet (576px - 767px) */
+        @media (min-width: 576px) and (max-width: 767px) {
+            .container {
+                padding: 25px 15px;
+            }
+            
+            .content {
+                padding: 40px 30px;
+            }
+            
+            .logo h1 {
+                font-size: 2.8rem;
+            }
+            
+            .main-text {
+                font-size: 1.25rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .feature {
+                padding: 15px;
+            }
+        }
+
+        /* Mobile (max-width: 575px) */
+        @media (max-width: 575px) {
+            .container {
+                padding: 20px 10px;
+                min-height: calc(100vh - 100px);
+            }
+            
+            .content {
+                padding: 30px 20px;
+                margin: 5px;
+                border-radius: 20px;
+            }
+            
+            .logo h1 {
+                font-size: 2.2rem;
+                margin-bottom: 10px;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 25px;
+            }
+            
+            .angel-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            
+            .main-text {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            
+            .description {
+                font-size: 0.9rem;
+                margin-bottom: 25px;
+            }
+            
+            .countdown {
+                gap: 8px;
+                margin: 25px 0;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin: 25px 0;
+            }
+            
+            .feature {
+                padding: 15px 10px;
+            }
+            
+            .feature-icon {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            .feature-text {
+                font-size: 0.85rem;
+            }
+            
+            footer {
+                padding: 15px 10px;
+            }
+            
+            .footer-copyright {
+                font-size: 0.8rem;
+                margin-bottom: 3px;
+            }
+            
+            .footer-credit {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Extra Small Mobile (max-width: 320px) */
+        @media (max-width: 320px) {
+            .content {
+                padding: 25px 15px;
+            }
+            
+            .logo h1 {
+                font-size: 2rem;
+            }
+            
+            .main-text {
+                font-size: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <h1>Marcela Resva</h1>
+                <p class="subtitle">Shifting Souls</p>
+            </div>
+
+            <div class="angel-icon">
+                ✨
+            </div>
+
+            <h2 class="main-text">Tu transformación espiritual está por comenzar</h2>
+
+            <p class="description">
+                Una comunidad sagrada para mujeres que están listas para descubrir sus dones, conectar con la divinidad y transformar su realidad desde la conciencia. Próximamente abriremos las puertas a este espacio de sanación y despertar.
+            </p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">--</span>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">--</span>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">--</span>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">--</span>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🪽</div>
+                    <div class="feature-text">Conexión con Angeles</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌟</div>
+                    <div class="feature-text">Descubre tu Misión</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤲🏻</div>
+                    <div class="feature-text">Sanación Profunda</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <div class="feature-text">Transformación</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-copyright">
+            © 2025 Todos los derechos reservados por Marcelaresva y Shifting Souls
+        </div>
+        <div class="footer-credit">
+            Diseñado y desarrollado por Felipe Reinven
+        </div>
+    </footer>
+
+    <script>
+        // Crear partículas flotantes (responsive)
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            // Ajustar número de partículas según el tamaño de pantalla
+            let particleCount = 50;
+            if (window.innerWidth < 768) {
+                particleCount = 20; // Menos partículas en móvil para mejor rendimiento
+            } else if (window.innerWidth < 1200) {
+                particleCount = 35; // Cantidad media en tablet
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Posición aleatoria
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // Delay de animación aleatorio
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Countdown timer - FECHA FIJA: 7 de Julio 2025
+        function startCountdown() {
+            // Fecha objetivo fija: 7 de Julio 2025 a las 00:00:00 (hora de Colombia)
+            const targetDate = new Date('July 7, 2025 00:00:00 GMT-0500');
+            
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate.getTime() - now;
+
+                // Si ya pasó la fecha objetivo
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdown').innerHTML = 
+                        '<div class="launch-message">🎉 ¡Ya estamos aquí! 🎉</div>';
+                    return;
+                }
+
+                // Calcular tiempo restante
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Actualizar display
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+
+            // Actualizar cada segundo
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Llamada inicial
+        }
+
+        // Inicializar todo cuando la página cargue
+        window.addEventListener('load', function() {
+            createParticles();
+            startCountdown();
+            
+            // Animación de entrada
+            document.querySelector('.content').style.opacity = '0';
+            document.querySelector('.content').style.transform = 'translateY(50px)';
+            
+            setTimeout(() => {
+                document.querySelector('.content').style.transition = 'all 1s ease';
+                document.querySelector('.content').style.opacity = '1';
+                document.querySelector('.content').style.transform = 'translateY(0)';
+            }, 300);
+        });
+
+        // Recrear partículas cuando cambie el tamaño de ventana
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const particlesContainer = document.getElementById('particles');
+                particlesContainer.innerHTML = ''; // Limpiar partículas existentes
+                createParticles(); // Crear nuevas con el número apropiado
+            }, 250);
+        });
+
+        // Parallax suave en scroll (optimizado)
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    const scrolled = window.pageYOffset;
+                    const particles = document.getElementById('particles');
+                    if (particles) {
+                        particles.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+</html>
