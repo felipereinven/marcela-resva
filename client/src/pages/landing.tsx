@@ -16,6 +16,7 @@ import { ParticleBackground } from "@/components/ui/particles";
 import { VimeoPlayer } from "@/components/ui/vimeo-player";
 import marcelaLogo from "@/assets/marcela-resva-logo.webp";
 import marcelaPhoto from "@/assets/22_1752622341890.jpg";
+import shiftingSoulsLogo from "@assets/IMG_0195-e1752623802409_1752623855399.webp";
 
 const subscriptionSchema = z.object({
   firstName: z.string().min(1, "El nombre es requerido"),
@@ -426,9 +427,11 @@ export default function Landing() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center">
-                  <i className="fas fa-feather-alt text-white text-lg"></i>
-                </div>
+                <img 
+                  src={shiftingSoulsLogo} 
+                  alt="Shifting Souls Logo" 
+                  className="w-12 h-12 rounded-full" 
+                />
                 <h3 className="text-2xl font-cormorant font-bold text-white">Shifting Souls</h3>
               </div>
               <p className="text-white/70 text-sm">
