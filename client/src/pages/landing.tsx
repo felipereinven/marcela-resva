@@ -203,7 +203,7 @@ export default function Landing() {
 
 
       {/* Transformation Journey */}
-      <section id="transformation" className="py-20 px-4">
+      <section id="transformation" className="py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -255,7 +255,7 @@ export default function Landing() {
       </section>
 
       {/* What You Get */}
-      <section id="community" className="py-20 px-4 bg-gradient-to-r from-white/5 to-white/10">
+      <section id="community" className="py-12 px-4 bg-gradient-to-r from-white/5 to-white/10">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -288,7 +288,7 @@ export default function Landing() {
       </section>
 
       {/* Newsletter Signup */}
-      <section id="newsletter-signup" className="py-20 px-4">
+      <section id="newsletter-signup" className="py-12 px-4">
         <div className="container mx-auto max-w-2xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -299,7 +299,7 @@ export default function Landing() {
             </p>
           </div>
 
-          <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+          <div className="bg-white/30 backdrop-blur-lg rounded-3xl p-8 border border-white/40 shadow-xl">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -308,12 +308,12 @@ export default function Landing() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/95 font-medium">Nombre *</FormLabel>
+                        <FormLabel className="text-white font-semibold">Nombre *</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
                             placeholder="Tu nombre"
-                            className="bg-white/20 border-white/30 text-white placeholder-white/60 focus:ring-warm-gold/50"
+                            className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
                           />
                         </FormControl>
                         <FormMessage />
@@ -325,12 +325,12 @@ export default function Landing() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white/95 font-medium">Apellido</FormLabel>
+                        <FormLabel className="text-white font-semibold">Apellido</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
                             placeholder="Tu apellido"
-                            className="bg-white/20 border-white/30 text-white placeholder-white/60 focus:ring-warm-gold/50"
+                            className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
                           />
                         </FormControl>
                         <FormMessage />
@@ -344,13 +344,13 @@ export default function Landing() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/95 font-medium">Email *</FormLabel>
+                      <FormLabel className="text-white font-semibold">Email *</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
                           type="email"
                           placeholder="tu@email.com"
-                          className="bg-white/20 border-white/30 text-white placeholder-white/60 focus:ring-warm-gold/50"
+                          className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
                         />
                       </FormControl>
                       <FormMessage />
@@ -363,10 +363,10 @@ export default function Landing() {
                   name="currentMoment"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white/95 font-medium">¿Qué te resuena más de tu momento actual?</FormLabel>
+                      <FormLabel className="text-white font-semibold">¿Qué te resuena más de tu momento actual?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/20 border-white/30 text-white focus:ring-warm-gold/50">
+                          <SelectTrigger className="bg-white/50 border-white/50 text-slate-800 focus:ring-purple-500/50 focus:border-purple-500">
                             <SelectValue placeholder="Selecciona una opción" />
                           </SelectTrigger>
                         </FormControl>
@@ -395,7 +395,7 @@ export default function Landing() {
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-white/80 text-sm">
+                        <FormLabel className="text-white font-medium text-sm">
                           Acepto recibir información sobre Shifting Souls y entiendo que puedo cancelar mi suscripción en cualquier momento.
                         </FormLabel>
                       </div>
@@ -406,7 +406,7 @@ export default function Landing() {
                 <Button 
                   type="submit" 
                   disabled={subscriptionMutation.isPending}
-                  className="w-full bg-gradient-to-r from-warm-gold to-rose-gold text-white font-semibold py-4 px-8 rounded-lg hover:shadow-lg hover:shadow-warm-gold/30 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-bold py-4 px-8 rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 hover:from-purple-700 hover:to-purple-900"
                 >
                   {subscriptionMutation.isPending ? (
                     <i className="fas fa-spinner fa-spin mr-2"></i>
