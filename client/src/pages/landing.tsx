@@ -122,7 +122,7 @@ export default function Landing() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-4 relative z-10">
+      <section className="pt-24 pb-8 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-center">
               <div className="space-y-6">
@@ -203,7 +203,7 @@ export default function Landing() {
 
 
       {/* Transformation Journey */}
-      <section id="transformation" className="py-12 px-4">
+      <section id="transformation" className="py-8 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -255,7 +255,7 @@ export default function Landing() {
       </section>
 
       {/* What You Get */}
-      <section id="community" className="py-12 px-4 bg-gradient-to-r from-white/5 to-white/10">
+      <section id="community" className="py-8 px-4 bg-gradient-to-r from-white/5 to-white/10">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -288,7 +288,7 @@ export default function Landing() {
       </section>
 
       {/* Newsletter Signup */}
-      <section id="newsletter-signup" className="py-12 px-4">
+      <section id="newsletter-signup" className="py-8 px-4">
         <div className="container mx-auto max-w-2xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
@@ -299,7 +299,7 @@ export default function Landing() {
             </p>
           </div>
 
-          <div className="bg-white/30 backdrop-blur-lg rounded-3xl p-8 border border-white/40 shadow-xl">
+          <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -308,12 +308,12 @@ export default function Landing() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white font-semibold">Nombre *</FormLabel>
+                        <FormLabel className="text-gray-800 font-semibold">Nombre *</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
                             placeholder="Tu nombre"
-                            className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
+                            className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
                           />
                         </FormControl>
                         <FormMessage />
@@ -325,12 +325,12 @@ export default function Landing() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-white font-semibold">Apellido</FormLabel>
+                        <FormLabel className="text-gray-800 font-semibold">Apellido</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
                             placeholder="Tu apellido"
-                            className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
+                            className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
                           />
                         </FormControl>
                         <FormMessage />
@@ -344,13 +344,13 @@ export default function Landing() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white font-semibold">Email *</FormLabel>
+                      <FormLabel className="text-gray-800 font-semibold">Email *</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
                           type="email"
                           placeholder="tu@email.com"
-                          className="bg-white/50 border-white/50 text-slate-800 placeholder-slate-500 focus:ring-purple-500/50 focus:border-purple-500"
+                          className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
                         />
                       </FormControl>
                       <FormMessage />
@@ -363,10 +363,10 @@ export default function Landing() {
                   name="currentMoment"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white font-semibold">¿Qué te resuena más de tu momento actual?</FormLabel>
+                      <FormLabel className="text-gray-800 font-semibold">¿Qué te resuena más de tu momento actual?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/50 border-white/50 text-slate-800 focus:ring-purple-500/50 focus:border-purple-500">
+                          <SelectTrigger className="bg-white border-gray-300 text-gray-900 focus:ring-purple-500 focus:border-purple-500 shadow-sm">
                             <SelectValue placeholder="Selecciona una opción" />
                           </SelectTrigger>
                         </FormControl>
@@ -392,10 +392,11 @@ export default function Landing() {
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
+                          className="border-gray-400 text-purple-600 focus:ring-purple-500"
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-white font-medium text-sm">
+                        <FormLabel className="text-gray-700 font-medium text-sm">
                           Acepto recibir información sobre Shifting Souls y entiendo que puedo cancelar mi suscripción en cualquier momento.
                         </FormLabel>
                       </div>
