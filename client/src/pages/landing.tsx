@@ -129,7 +129,7 @@ export default function Landing() {
                 <h2 className="text-xl font-dancing text-warm-gold">Bienvenida al despertar</h2>
                 <h1 className="text-5xl lg:text-6xl font-cormorant font-bold text-white leading-tight">
                   Convierte tu{" "}
-                  <span className="bg-gradient-to-r from-warm-gold to-rose-gold bg-clip-text text-transparent">
+                  <span className="text-warm-gold font-bold drop-shadow-lg">
                     noche oscura
                   </span>
                   {" "}en el amanecer de tu propósito
@@ -147,17 +147,17 @@ export default function Landing() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   onClick={() => scrollToSection('newsletter-signup')}
-                  className="bg-gradient-to-r from-warm-gold to-rose-gold text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-warm-gold/30 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-warm-gold to-rose-gold text-slate-900 px-8 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-warm-gold/50 transition-all duration-300 transform hover:scale-105 hover:from-rose-gold hover:to-warm-gold"
                 >
                   Comenzar Mi Transformación
                 </Button>
                 <Button 
                   variant="outline"
                   onClick={() => scrollToSection('transformation')}
-                  className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
+                  className="border-2 border-warm-gold text-warm-gold px-8 py-4 rounded-full font-bold hover:bg-warm-gold hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
                 >
                   Conoce el Proceso
                 </Button>
