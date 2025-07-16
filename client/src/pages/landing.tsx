@@ -442,9 +442,9 @@ export default function Landing() {
             <div>
               <h4 className="text-white font-semibold mb-4">Conecta Conmigo</h4>
               <div className="space-y-2">
-                <a href="#" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
+                <a href="mailto:info@marcelaresva.com" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
                   <i className="fas fa-envelope mr-2"></i>
-                  hola@marcelaresva.com
+                  info@marcelaresva.com
                 </a>
                 <a href="#" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
                   <i className="fab fa-instagram mr-2"></i>
@@ -464,7 +464,10 @@ export default function Landing() {
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-white/60 text-sm">
-              © 2024 Shifting Souls. Todos los derechos reservados. Con amor desde el corazón.
+              © 2025 Shifting Souls. Todos los derechos reservados. Con amor desde el corazón.
+            </p>
+            <p className="text-white/50 text-xs mt-2">
+              Design By Felipe Reinven
             </p>
           </div>
         </div>

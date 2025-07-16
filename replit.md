@@ -126,6 +126,11 @@ The application follows a spiritual wellness theme with purple/blue gradients, m
 - ✅ Newsletter form captures: firstName, lastName, email, currentMoment
 - ✅ API successfully creates subscribers in both local storage and MailerLite
 - ✅ Proper error handling for duplicate emails and validation
+- ✅ Significantly reduced section spacing for compact, professional layout
+- ✅ Improved form contrast with white/90 background and proper text colors
+- ✅ Added Shifting Souls mandala logo to footer
+- ✅ Updated footer with correct contact email (info@marcelaresva.com)
+- ✅ Updated copyright to 2025 and added design credit to Felipe Reinven
 
 ### Current Status
 - Landing page fully functional with spiritual theme
