@@ -299,6 +299,15 @@ export default function Landing() {
           </div>
 
           <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-cormorant font-bold text-gray-800 mb-2">
+                Tu alma te está llamando
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Únete a miles de mujeres que ya están transformando su vida. El cambio comienza ahora.
+              </p>
+            </div>
+            
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -446,7 +455,7 @@ export default function Landing() {
                   <i className="fas fa-envelope mr-2"></i>
                   info@marcelaresva.com
                 </a>
-                <a href="#" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
+                <a href="https://www.instagram.com/shiftingsouls" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
                   <i className="fab fa-instagram mr-2"></i>
                   @shiftingsouls
                 </a>
