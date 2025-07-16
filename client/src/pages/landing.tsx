@@ -277,8 +277,8 @@ export default function Landing() {
               <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="mb-4">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center mr-3">
-                      <i className={`${item.icon} text-white text-lg`}></i>
+                    <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
+                      <i className={`${item.icon} text-warm-gold text-lg`}></i>
                     </div>
                     <h3 className="text-white font-semibold text-lg">{item.title}</h3>
                   </div>
