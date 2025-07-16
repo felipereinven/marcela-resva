@@ -267,19 +267,23 @@ export default function Landing() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "fas fa-praying-hands", title: "Meditaciones Guiadas", description: "Sesiones de meditación personalizadas para tu despertar espiritual" },
+              { icon: "fas fa-om", title: "Meditaciones Guiadas", description: "Sesiones de meditación personalizadas para tu despertar espiritual" },
               { icon: "fas fa-heart", title: "Terapias de Sanación", description: "Procesos de sanación profunda para liberar traumas y bloqueos" },
-              { icon: "fas fa-angel", title: "Pregúntale a tus Ángeles", description: "Sesiones en vivo mensuales y grabadas semanales" },
+              { icon: "fas fa-hands-praying", title: "Pregúntale a tus Ángeles", description: "Sesiones en vivo mensuales y grabadas semanales" },
               { icon: "fas fa-users", title: "Comunidad Sagrada", description: "Conecta con otras mujeres en el mismo proceso de transformación" },
-              { icon: "fas fa-book", title: "Recursos Exclusivos", description: "Libros, cursos y descuentos especiales para miembros" },
-              { icon: "fas fa-calendar-star", title: "Eventos Presenciales", description: "Talleres y retiros para profundizar tu conexión espiritual" }
+              { icon: "fas fa-book-open", title: "Recursos Exclusivos", description: "Libros, cursos y descuentos especiales para miembros" },
+              { icon: "fas fa-calendar-check", title: "Eventos Presenciales", description: "Talleres y retiros para profundizar tu conexión espiritual" }
             ].map((item, index) => (
               <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <i className={`${item.icon} text-warm-gold text-xl mr-3`}></i>
-                  <h3 className="text-white font-semibold">{item.title}</h3>
+                <div className="mb-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center mr-3">
+                      <i className={`${item.icon} text-white text-lg`}></i>
+                    </div>
+                    <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+                  </div>
+                  <p className="text-white/95 text-sm leading-relaxed">{item.description}</p>
                 </div>
-                <p className="text-white/95 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
