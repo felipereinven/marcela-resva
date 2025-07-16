@@ -308,7 +308,10 @@ export default function Landing() {
                 Tu alma te está llamando
               </h3>
               <p className="text-gray-600 text-sm">
-                Únete a miles de mujeres que ya están transformando su vida. El cambio comienza ahora.
+                Únete a miles de mujeres que ya están transformando su vida.
+              </p>
+              <p className="text-gray-700 text-sm font-medium mt-2">
+                El cambio comienza ahora.
               </p>
             </div>
             
