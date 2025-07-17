@@ -191,7 +191,7 @@ export default function Landing() {
                   
                   <div className="mt-6 text-center">
                     <p className="text-white font-medium text-lg">
-                      "Mi proceso de sanación me mostró que renacer es posible"
+                      "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
                     </p>
                     <p className="text-warm-gold font-dancing text-xl mt-2">- Marcela</p>
                   </div>
