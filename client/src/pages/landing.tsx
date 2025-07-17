@@ -130,7 +130,7 @@ export default function Landing() {
                 <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Bienvenida al despertar</h2>
                 <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
                   Convierte tu{" "}
-                  <span className="font-bold drop-shadow-lg" style={{color: '#b2ada8'}}>
+                  <span className="font-bold drop-shadow-lg bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">
                     noche oscura
                   </span>
                   {" "}en el amanecer de tu propósito
@@ -191,15 +191,15 @@ export default function Landing() {
 
               <div className="flex items-center justify-center space-x-8 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>3000+</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">3000+</div>
                   <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Almas transformadas</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>30</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">30</div>
                   <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Días para cambiar</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>24/7</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">24/7</div>
                   <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Apoyo divino</div>
                 </div>
               </div>
