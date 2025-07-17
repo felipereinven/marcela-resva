@@ -7,7 +7,7 @@ export default function ThankYou() {
   const whatsappGroupUrl = "https://chat.whatsapp.com/tu-grupo-de-whatsapp";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 font-poppins">
+    <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
       
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
@@ -29,7 +29,7 @@ export default function ThankYou() {
           </div>
 
           <div className="relative mb-12">
-            <div className="absolute -inset-4 bg-gradient-to-r from-celestial-blue/30 to-mystic-purple/30 rounded-3xl blur-2xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-dusty-rose/30 to-earthy-mauve/30 rounded-3xl blur-2xl"></div>
             <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
             </div>
@@ -57,19 +57,19 @@ export default function ThankYou() {
 
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-envelope text-warm-gold text-2xl mb-4"></i>
+                <i className="fas fa-envelope text-dusty-rose text-2xl mb-4"></i>
                 <h3 className="text-white font-semibold mb-2">Revisa tu Email</h3>
                 <p className="text-white/95 text-sm">Recibirás un email de confirmación con los próximos pasos</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-calendar text-warm-gold text-2xl mb-4"></i>
+                <i className="fas fa-calendar text-dusty-rose text-2xl mb-4"></i>
                 <h3 className="text-white font-semibold mb-2">Próxima Sesión</h3>
                 <p className="text-white/95 text-sm">Sesión "Pregúntale a tus Ángeles" este viernes a las 7 PM</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-gift text-warm-gold text-2xl mb-4"></i>
+                <i className="fas fa-gift text-dusty-rose text-2xl mb-4"></i>
                 <h3 className="text-white font-semibold mb-2">Regalo de Bienvenida</h3>
                 <p className="text-white/95 text-sm">Meditación guiada gratuita en tu bandeja de entrada</p>
               </div>

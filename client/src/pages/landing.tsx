@@ -93,7 +93,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 font-poppins">
+    <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
       
       {/* Navigation */}
@@ -193,7 +193,7 @@ export default function Landing() {
                     <p className="text-white font-medium text-lg">
                       "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
                     </p>
-                    <p className="text-warm-gold font-dancing text-xl mt-2">- Marcela</p>
+                    <p className="text-dusty-rose font-dancing text-xl mt-2">- Marcela</p>
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function Landing() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-warm-gold to-rose-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-dusty-rose to-earthy-mauve rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-moon text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Reconoce tu Noche Oscura</h3>
@@ -228,7 +228,7 @@ export default function Landing() {
 
             <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-celestial-blue to-mystic-teal rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-soft-mauve to-powder-rose rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-feather-alt text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Conecta con tu Divinidad</h3>
@@ -240,7 +240,7 @@ export default function Landing() {
 
             <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-mystic-purple to-rose-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-powder-rose to-dusty-rose rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-sun text-white text-2xl"></i>
                 </div>
                 <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Manifiesta tu Propósito</h3>
@@ -261,36 +261,36 @@ export default function Landing() {
               Lo que recibirás en Shifting Souls
             </h2>
             <p className="text-xl text-white/95 mb-6">
-              Una comunidad sagrada por solo <span className="text-warm-gold font-bold">$33.99/mes</span>
+              Una comunidad sagrada por solo <span className="text-dusty-rose font-bold">$33.99/mes</span>
             </p>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-cormorant font-bold text-warm-gold mb-4">
+              <h3 className="text-2xl font-cormorant font-bold text-dusty-rose mb-4">
                 Recibe guía espiritual activa cada mes a través de:
               </h3>
               <ul className="text-left text-white/95 space-y-3">
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Audios canalizados con mensajes de tus guías y movimientos del alma.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Videos con ejercicios energéticos para integrar lo recibido: respiración, anclaje, visualización.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Movimientos de liberación y reconexión en portales, lunas llenas o eventos cósmicos.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Activaciones con cristales y flujos de energía para armonizar tu cuerpo y abrir tus canales.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Prácticas guiadas para integrar tu luz: movimientos conscientes, escritura, introspección.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-warm-gold mr-3">•</span>
+                  <span className="text-dusty-rose mr-3">•</span>
                   <span>Acompañamiento espiritual profundo alineado con la vibración energética del mes.</span>
                 </li>
               </ul>
@@ -310,7 +310,7 @@ export default function Landing() {
                 <div className="mb-4">
                   <div className="flex items-center mb-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
-                      <i className={`${item.icon} text-warm-gold text-lg`}></i>
+                      <i className={`${item.icon} text-dusty-rose text-lg`}></i>
                     </div>
                     <h3 className="text-white font-semibold text-lg">{item.title}</h3>
                   </div>
@@ -454,7 +454,19 @@ export default function Landing() {
                 <Button 
                   type="submit" 
                   disabled={subscriptionMutation.isPending}
-                  className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-bold py-4 px-8 rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 hover:from-purple-700 hover:to-purple-900"
+                  className="w-full text-white font-bold py-4 px-8 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  style={{
+                    background: "linear-gradient(to right, #ae667d, #976e73)",
+                    boxShadow: "0 10px 25px rgba(174, 102, 125, 0.3)"
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to right, #976e73, #b09196)";
+                    e.currentTarget.style.boxShadow = "0 15px 35px rgba(174, 102, 125, 0.4)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to right, #ae667d, #976e73)";
+                    e.currentTarget.style.boxShadow = "0 10px 25px rgba(174, 102, 125, 0.3)";
+                  }}
                 >
                   {subscriptionMutation.isPending ? (
                     <i className="fas fa-spinner fa-spin mr-2"></i>
@@ -490,11 +502,11 @@ export default function Landing() {
             <div>
               <h4 className="text-white font-semibold mb-4">Conecta Conmigo</h4>
               <div className="space-y-2">
-                <a href="mailto:info@marcelaresva.com" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
+                <a href="mailto:info@marcelaresva.com" className="text-white/70 hover:text-dusty-rose transition-colors text-sm block">
                   <i className="fas fa-envelope mr-2"></i>
                   info@marcelaresva.com
                 </a>
-                <a href="https://www.instagram.com/shiftingsouls" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-warm-gold transition-colors text-sm block">
+                <a href="https://www.instagram.com/shiftingsouls" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-dusty-rose transition-colors text-sm block">
                   <i className="fab fa-instagram mr-2"></i>
                   @shiftingsouls
                 </a>
@@ -506,7 +518,7 @@ export default function Landing() {
               <blockquote className="text-white/70 text-sm italic">
                 "Marcela me ayudó a encontrar mi camino cuando todo parecía perdido. Su guía es pura magia."
               </blockquote>
-              <cite className="text-warm-gold text-sm block mt-2">- Ana M.</cite>
+              <cite className="text-dusty-rose text-sm block mt-2">- Ana M.</cite>
             </div>
           </div>
 

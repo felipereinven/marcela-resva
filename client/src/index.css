@@ -26,13 +26,15 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
-  /* Custom spiritual colors */
-  --mystic-purple: hsl(267, 28%, 51%);
-  --celestial-blue: hsl(226, 73%, 66%);
-  --warm-gold: hsl(48, 89%, 57%);
-  --soft-lavender: hsl(240, 100%, 95%);
-  --rose-gold: hsl(351, 51%, 79%);
-  --mystic-teal: hsl(197, 37%, 47%);
+  /* Custom spiritual colors - Nueva paleta */
+  --dusty-rose: #ae667d;
+  --earthy-mauve: #976e73;
+  --soft-mauve: #bea4a8;
+  --powder-rose: #b09196;
+  --light-rose: #f6e3eb;
+  --sage-green: #b2ada8;
+  --warm-beige: #bba5a1;
+  --deep-taupe: #adb4aa;
 }
 
 .dark {
@@ -81,51 +83,67 @@
 }
 
 @layer utilities {
-  .text-mystic-purple {
-    color: var(--mystic-purple);
+  .text-dusty-rose {
+    color: var(--dusty-rose);
   }
 
-  .text-celestial-blue {
-    color: var(--celestial-blue);
+  .text-earthy-mauve {
+    color: var(--earthy-mauve);
   }
 
-  .text-warm-gold {
-    color: var(--warm-gold);
+  .text-soft-mauve {
+    color: var(--soft-mauve);
   }
 
-  .text-soft-lavender {
-    color: var(--soft-lavender);
+  .text-powder-rose {
+    color: var(--powder-rose);
   }
 
-  .text-rose-gold {
-    color: var(--rose-gold);
+  .text-light-rose {
+    color: var(--light-rose);
   }
 
-  .text-mystic-teal {
-    color: var(--mystic-teal);
+  .text-sage-green {
+    color: var(--sage-green);
   }
 
-  .bg-mystic-purple {
-    background-color: var(--mystic-purple);
+  .text-warm-beige {
+    color: var(--warm-beige);
   }
 
-  .bg-celestial-blue {
-    background-color: var(--celestial-blue);
+  .text-deep-taupe {
+    color: var(--deep-taupe);
   }
 
-  .bg-warm-gold {
-    background-color: var(--warm-gold);
+  .bg-dusty-rose {
+    background-color: var(--dusty-rose);
   }
 
-  .bg-soft-lavender {
-    background-color: var(--soft-lavender);
+  .bg-earthy-mauve {
+    background-color: var(--earthy-mauve);
   }
 
-  .bg-rose-gold {
-    background-color: var(--rose-gold);
+  .bg-soft-mauve {
+    background-color: var(--soft-mauve);
   }
 
-  .bg-mystic-teal {
-    background-color: var(--mystic-teal);
+  .bg-powder-rose {
+    background-color: var(--powder-rose);
+  }
+
+  .bg-light-rose {
+    background-color: var(--light-rose);
+  }
+
+  .bg-sage-green {
+    background-color: var(--sage-green);
+  }
+
+  .bg-warm-beige {
+    background-color: var(--warm-beige);
+  }
+
+  .bg-deep-taupe {
+    background-color: var(--deep-taupe);
   }
 }

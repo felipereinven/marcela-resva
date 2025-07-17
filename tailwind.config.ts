@@ -61,6 +61,15 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+        // Nueva paleta rosa/malva
+        "dusty-rose": "var(--dusty-rose)",
+        "earthy-mauve": "var(--earthy-mauve)",
+        "soft-mauve": "var(--soft-mauve)",
+        "powder-rose": "var(--powder-rose)",
+        "light-rose": "var(--light-rose)",
+        "sage-green": "var(--sage-green)",
+        "warm-beige": "var(--warm-beige)",
+        "deep-taupe": "var(--deep-taupe)",
       },
       keyframes: {
         "accordion-down": {
