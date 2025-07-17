@@ -218,7 +218,7 @@ export default function Landing() {
                     <p className="text-white font-medium text-lg">
                       "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
                     </p>
-                    <p className="text-dusty-rose font-dancing text-xl mt-2">- Marcela</p>
+                    <p className="font-dancing text-xl mt-2" style={{color: '#b2ada8'}}>- Marcela</p>
                   </div>
                 </div>
               </div>
@@ -285,37 +285,37 @@ export default function Landing() {
             <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
               Lo que recibirás en Shifting Souls
             </h2>
-            <p className="text-xl text-white/95 mb-6">
-              Una comunidad sagrada por solo <span className="text-dusty-rose font-bold">$33.99/mes</span>
+            <p className="text-xl mb-6" style={{color: '#f6e3eb', opacity: 0.9}}>
+              Una comunidad sagrada por solo <span className="font-bold" style={{color: '#bba5a1'}}>$33.99/mes</span>
             </p>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#b2ada8'}}>
+              <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
                 Recibe guía espiritual activa cada mes a través de:
               </h3>
-              <ul className="text-left text-white/95 space-y-3">
+              <ul className="text-left space-y-3" style={{color: '#f6e3eb', opacity: 0.9}}>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Audios canalizados con mensajes de tus guías y movimientos del alma.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Videos con ejercicios energéticos para integrar lo recibido: respiración, anclaje, visualización.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Movimientos de liberación y reconexión en portales, lunas llenas o eventos cósmicos.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Activaciones con cristales y flujos de energía para armonizar tu cuerpo y abrir tus canales.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Prácticas guiadas para integrar tu luz: movimientos conscientes, escritura, introspección.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-dusty-rose mr-3">•</span>
+                  <span className="mr-3" style={{color: '#bba5a1'}}>•</span>
                   <span>Acompañamiento espiritual profundo alineado con la vibración energética del mes.</span>
                 </li>
               </ul>
@@ -337,9 +337,9 @@ export default function Landing() {
                     <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
                       <i className={`${item.icon} text-dusty-rose text-lg`}></i>
                     </div>
-                    <h3 className="font-semibold text-lg" style={{color: '#f6e3eb'}}>{item.title}</h3>
+                    <h3 className="font-semibold text-lg" style={{color: '#bba5a1'}}>{item.title}</h3>
                   </div>
-                  <p className="text-white/95 text-sm leading-relaxed">{item.description}</p>
+                  <p className="text-sm leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>{item.description}</p>
                 </div>
               </div>
             ))}
