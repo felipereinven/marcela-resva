@@ -70,6 +70,11 @@ export default {
         "sage-green": "var(--sage-green)",
         "warm-beige": "var(--warm-beige)",
         "deep-taupe": "var(--deep-taupe)",
+        // Colores adicionales para contraste
+        "light-pink": "var(--light-pink)",
+        "neutral-beige": "var(--neutral-beige)",
+        "warm-taupe": "var(--warm-taupe)",
+        "sage-gray": "var(--sage-gray)",
       },
       keyframes: {
         "accordion-down": {

@@ -127,10 +127,10 @@ export default function Landing() {
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-center">
               <div className="space-y-6">
-                <h2 className="text-xl font-dancing text-warm-gold">Bienvenida al despertar</h2>
-                <h1 className="text-5xl lg:text-6xl font-cormorant font-bold text-white leading-tight">
+                <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Bienvenida al despertar</h2>
+                <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
                   Convierte tu{" "}
-                  <span className="text-warm-gold font-bold drop-shadow-lg">
+                  <span className="font-bold drop-shadow-lg" style={{color: '#b2ada8'}}>
                     noche oscura
                   </span>
                   {" "}en el amanecer de tu propósito
@@ -142,7 +142,7 @@ export default function Landing() {
 
               {/* Video Section */}
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-celestial-blue/30 to-mystic-purple/30 rounded-3xl blur-2xl"></div>
+                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
                 <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
                   <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
                 </div>
@@ -151,14 +151,39 @@ export default function Landing() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   onClick={() => scrollToSection('newsletter-signup')}
-                  className="bg-white text-purple-900 px-8 py-4 rounded-full font-bold hover:bg-purple-50 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-105 border-2 border-white"
+                  className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2"
+                  style={{
+                    backgroundColor: '#f6e3eb',
+                    color: '#976e73',
+                    borderColor: '#f6e3eb'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = '#bba5a1';
+                    e.currentTarget.style.color = '#f6e3eb';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f6e3eb';
+                    e.currentTarget.style.color = '#976e73';
+                  }}
                 >
                   Comenzar Mi Transformación
                 </Button>
                 <Button 
                   variant="outline"
                   onClick={() => scrollToSection('transformation')}
-                  className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105 bg-transparent"
+                  className="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 border-2 bg-transparent"
+                  style={{
+                    borderColor: '#f6e3eb',
+                    color: '#f6e3eb'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f6e3eb';
+                    e.currentTarget.style.color = '#976e73';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#f6e3eb';
+                  }}
                 >
                   Conoce el Proceso
                 </Button>
@@ -166,22 +191,22 @@ export default function Landing() {
 
               <div className="flex items-center justify-center space-x-8 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-warm-gold">3000+</div>
-                  <div className="text-white/90 text-sm font-medium">Almas transformadas</div>
+                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>3000+</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Almas transformadas</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-warm-gold">30</div>
-                  <div className="text-white/90 text-sm font-medium">Días para cambiar</div>
+                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>30</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Días para cambiar</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-warm-gold">24/7</div>
-                  <div className="text-white/90 text-sm font-medium">Apoyo divino</div>
+                  <div className="text-3xl font-bold" style={{color: '#b2ada8'}}>24/7</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Apoyo divino</div>
                 </div>
               </div>
 
               {/* Testimonial Section */}
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-warm-gold/30 to-rose-gold/30 rounded-3xl blur-2xl"></div>
+                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
                 <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
                   <img 
                     src={marcelaPhoto} 
@@ -205,7 +230,7 @@ export default function Landing() {
       <section id="transformation" className="py-4 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
+            <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
               Tu Viaje de Transformación
             </h2>
             <p className="text-xl text-white/95 max-w-2xl mx-auto">
@@ -219,8 +244,8 @@ export default function Landing() {
                 <div className="w-16 h-16 bg-gradient-to-br from-dusty-rose to-earthy-mauve rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-moon text-white text-2xl"></i>
                 </div>
-                <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Reconoce tu Noche Oscura</h3>
-                <p className="text-white/95 leading-relaxed">
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Reconoce tu Noche Oscura</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
                   Identifica las señales de tu alma pidiendo transformación. Abraza la oscuridad como el primer paso hacia tu amanecer.
                 </p>
               </div>
@@ -231,8 +256,8 @@ export default function Landing() {
                 <div className="w-16 h-16 bg-gradient-to-br from-soft-mauve to-powder-rose rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-feather-alt text-white text-2xl"></i>
                 </div>
-                <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Conecta con tu Divinidad</h3>
-                <p className="text-white/95 leading-relaxed">
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Conecta con tu Divinidad</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
                   Fortalece tu conexión con los ángeles y tu guía interior. Aprende a escuchar las señales divinas que siempre han estado ahí.
                 </p>
               </div>
@@ -243,8 +268,8 @@ export default function Landing() {
                 <div className="w-16 h-16 bg-gradient-to-br from-powder-rose to-dusty-rose rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-sun text-white text-2xl"></i>
                 </div>
-                <h3 className="text-2xl font-cormorant font-bold text-white mb-4">Manifiesta tu Propósito</h3>
-                <p className="text-white/95 leading-relaxed">
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Manifiesta tu Propósito</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
                   Descubre tu misión de vida y crea una existencia alineada con tu alma. Transforma el dolor en poder interior.
                 </p>
               </div>
@@ -257,7 +282,7 @@ export default function Landing() {
       <section id="community" className="py-4 px-4 bg-gradient-to-r from-white/5 to-white/10">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
+            <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
               Lo que recibirás en Shifting Souls
             </h2>
             <p className="text-xl text-white/95 mb-6">
@@ -265,7 +290,7 @@ export default function Landing() {
             </p>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-cormorant font-bold text-dusty-rose mb-4">
+              <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#b2ada8'}}>
                 Recibe guía espiritual activa cada mes a través de:
               </h3>
               <ul className="text-left text-white/95 space-y-3">
@@ -312,7 +337,7 @@ export default function Landing() {
                     <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
                       <i className={`${item.icon} text-dusty-rose text-lg`}></i>
                     </div>
-                    <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+                    <h3 className="font-semibold text-lg" style={{color: '#f6e3eb'}}>{item.title}</h3>
                   </div>
                   <p className="text-white/95 text-sm leading-relaxed">{item.description}</p>
                 </div>
@@ -326,23 +351,23 @@ export default function Landing() {
       <section id="newsletter-signup" className="py-4 px-4">
         <div className="container mx-auto max-w-2xl">
           <div className="text-center mb-6">
-            <h2 className="text-4xl font-cormorant font-bold text-white mb-4">
+            <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
               Comienza tu transformación hoy
             </h2>
-            <p className="text-xl text-white/95">
+            <p className="text-xl" style={{color: '#f6e3eb', opacity: 0.9}}>
               Únete a nuestra comunidad y recibe contenido exclusivo para iniciar tu despertar espiritual
             </p>
           </div>
 
           <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-cormorant font-bold text-gray-800 mb-2">
+              <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
                 Tu alma te está llamando
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm" style={{color: '#b2ada8'}}>
                 Únete a miles de mujeres que ya están transformando su vida.
               </p>
-              <p className="text-gray-700 text-sm font-medium mt-2">
+              <p className="text-sm font-medium mt-2" style={{color: '#976e73'}}>
                 El cambio comienza ahora.
               </p>
             </div>
@@ -355,7 +380,7 @@ export default function Landing() {
                     name="firstName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-800 font-semibold">Nombre *</FormLabel>
+                        <FormLabel className="font-semibold" style={{color: '#976e73'}}>Nombre *</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
@@ -372,7 +397,7 @@ export default function Landing() {
                     name="lastName"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-800 font-semibold">Apellido</FormLabel>
+                        <FormLabel className="font-semibold" style={{color: '#976e73'}}>Apellido</FormLabel>
                         <FormControl>
                           <Input 
                             {...field}
@@ -391,7 +416,7 @@ export default function Landing() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-800 font-semibold">Email *</FormLabel>
+                      <FormLabel className="font-semibold" style={{color: '#976e73'}}>Email *</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
@@ -410,7 +435,7 @@ export default function Landing() {
                   name="currentMoment"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-800 font-semibold">¿Qué te resuena más de tu momento actual?</FormLabel>
+                      <FormLabel className="font-semibold" style={{color: '#976e73'}}>¿Qué te resuena más de tu momento actual?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="bg-white border-gray-300 text-gray-900 focus:ring-purple-500 focus:border-purple-500 shadow-sm">
@@ -443,7 +468,7 @@ export default function Landing() {
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-gray-700 font-medium text-sm">
+                        <FormLabel className="font-medium text-sm" style={{color: '#b2ada8'}}>
                           Acepto recibir información sobre Shifting Souls y entiendo que puedo cancelar mi suscripción en cualquier momento.
                         </FormLabel>
                       </div>

@@ -35,6 +35,12 @@
   --sage-green: #b2ada8;
   --warm-beige: #bba5a1;
   --deep-taupe: #adb4aa;
+  
+  /* Colores adicionales para contraste */
+  --light-pink: #f6e3eb;
+  --neutral-beige: #b2ada8;
+  --warm-taupe: #bba5a1;
+  --sage-gray: #adb4aa;
 }
 
 .dark {
