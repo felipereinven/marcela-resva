@@ -299,7 +299,7 @@ export default function Landing() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "fas fa-om", title: "Cápsulas de Introspección", description: "Sesiones de meditación personalizadas para tu despertar espiritual" },
+              { icon: "fas fa-om", title: "Cápsulas de Introspección", description: "Espacios de reflexión profunda para conectar contigo misma y descubrir tu sabiduría interior" },
               { icon: "fas fa-heart", title: "Terapias de Sanación", description: "Procesos de sanación profunda para liberar traumas y bloqueos" },
               { icon: "fas fa-hands-praying", title: "Pregúntale a tus Ángeles", description: "Sesiones en vivo mensuales y grabadas semanales" },
               { icon: "fas fa-users", title: "Comunidad Sagrada", description: "Conecta con otras mujeres en el mismo proceso de transformación" },
