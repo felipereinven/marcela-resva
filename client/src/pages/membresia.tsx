@@ -76,27 +76,11 @@ export default function MembresiaPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
-      
-      {/* Background Gradient */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: `
-            linear-gradient(135deg, 
-              rgba(178, 173, 168, 0.9) 0%, 
-              rgba(187, 165, 161, 0.95) 25%, 
-              rgba(174, 102, 125, 0.9) 50%, 
-              rgba(151, 110, 115, 0.95) 75%, 
-              rgba(176, 145, 150, 0.9) 100%
-            )
-          `
-        }}
-      />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/15 backdrop-blur-xl border-b border-white/30 transition-all duration-300 shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -129,7 +113,7 @@ export default function MembresiaPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-center">
               <div className="space-y-6">
-                <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
+                <h1 className="text-3xl lg:text-4xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
                   Esa incomodidad que no sabes explicar, esa ansiedad sutil o ese cansancio que no se va con descanso… Son mensajes que vas a saber interpretar.
                 </h1>
                 <p className="text-xl text-white/95 leading-relaxed">
