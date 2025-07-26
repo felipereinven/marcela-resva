@@ -204,7 +204,12 @@ export default function MembresiaPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    style={{
+                      background: 'linear-gradient(to bottom right, #976e73, #ae667d)'
+                    }}
+                  >
                     <i className="fas fa-heart text-white text-2xl"></i>
                   </div>
                   <p className="leading-relaxed text-white text-lg">
@@ -215,7 +220,12 @@ export default function MembresiaPage() {
 
               <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    style={{
+                      background: 'linear-gradient(to bottom right, #b2ada8, #bba5a1)'
+                    }}
+                  >
                     <i className="fas fa-star text-white text-2xl"></i>
                   </div>
                   <p className="leading-relaxed text-white text-lg">
@@ -226,7 +236,12 @@ export default function MembresiaPage() {
 
               <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    style={{
+                      background: 'linear-gradient(to bottom right, #ae667d, #b09196)'
+                    }}
+                  >
                     <i className="fas fa-bolt text-white text-2xl"></i>
                   </div>
                   <p className="leading-relaxed text-white text-lg">
