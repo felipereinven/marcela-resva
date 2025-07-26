@@ -156,12 +156,6 @@ export default function Landing() {
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
                     Tu alma te está llamando
                   </h3>
-                  <p className="text-sm" style={{color: '#b2ada8'}}>
-                    Únete a miles de mujeres que ya están transformando su vida.
-                  </p>
-                  <p className="text-sm font-medium mt-2" style={{color: '#976e73'}}>
-                    El cambio comienza ahora.
-                  </p>
                 </div>
                 
                 <Form {...form}>
