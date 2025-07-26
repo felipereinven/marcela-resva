@@ -127,11 +127,16 @@ export default function Landing() {
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-8 text-center">
               <div className="space-y-6">
+                <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Bienvenida al despertar</h2>
                 <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
-                  Esa incomodidad que no sabes explicar, esa ansiedad sutil o ese cansancio que no se va con descanso… Son mensajes que vas a saber interpretar.
+                  Convierte tu{" "}
+                  <span className="font-bold drop-shadow-lg bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">
+                    noche oscura
+                  </span>
+                  {" "}en el amanecer de tu propósito
                 </h1>
                 <p className="text-xl text-white/95 leading-relaxed">
-                  Sentir plenitud, vivir tu misión de vida y transformar el dolor en poder interior serán destrezas que vas a adquirir en nuestra casita… La casita de Shifting Souls.
+                  Acompaño a mujeres que se encuentran en medio de una crisis espiritual a reconectar con su divinidad, descubrir su misión de vida y transformar el dolor en poder interior.
                 </p>
               </div>
 
@@ -143,34 +148,77 @@ export default function Landing() {
                 </div>
               </div>
               
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={() => scrollToSection('newsletter-signup')}
+                  className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2"
+                  style={{
+                    backgroundColor: '#f6e3eb',
+                    color: '#976e73',
+                    borderColor: '#f6e3eb'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = '#bba5a1';
+                    e.currentTarget.style.color = '#f6e3eb';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f6e3eb';
+                    e.currentTarget.style.color = '#976e73';
+                  }}
+                >
+                  Comenzar Mi Transformación
+                </Button>
+                <Button 
+                  variant="outline"
+                  onClick={() => scrollToSection('transformation')}
+                  className="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 border-2 bg-transparent"
+                  style={{
+                    borderColor: '#f6e3eb',
+                    color: '#f6e3eb'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f6e3eb';
+                    e.currentTarget.style.color = '#976e73';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#f6e3eb';
+                  }}
+                >
+                  Conoce el Proceso
+                </Button>
+              </div>
 
+              <div className="flex items-center justify-center space-x-8 pt-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">3000+</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Almas transformadas</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">30</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Días para cambiar</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">24/7</div>
+                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Apoyo divino</div>
+                </div>
+              </div>
 
-              {/* Story Section */}
+              {/* Testimonial Section */}
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
                 <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-6">
-                      <p className="text-white text-lg leading-relaxed">
-                        Hace 10 años yo estaba pasando por un divorcio que me rompió y ahí llegó de nuevo esa sensación de estar pérdida… Pero también llegó la certeza de que ya no podía seguir viviendo igual.
-                      </p>
-                      <p className="text-white text-lg leading-relaxed">
-                        Justo ahí nació nuestra comunidad hace 10 años, Shifting Souls nace en medio del deseo de traerles la sanación que yo estaba vivenciando y esa conexión con la divinidad.
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <img 
-                        src={marcelaPhoto} 
-                        alt="Marcela - Transformación espiritual" 
-                        className="w-full h-[400px] object-cover object-top rounded-2xl" 
-                      />
-                      <div className="mt-4 text-center">
-                        <p className="text-white font-medium text-lg">
-                          "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
-                        </p>
-                        <p className="font-dancing text-xl mt-2 text-yellow-300">- Marcela</p>
-                      </div>
-                    </div>
+                  <img 
+                    src={marcelaPhoto} 
+                    alt="Marcela - Transformación espiritual" 
+                    className="w-full h-[500px] object-cover object-top rounded-2xl" 
+                  />
+                  
+                  <div className="mt-6 text-center">
+                    <p className="text-white font-medium text-lg">
+                      "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
+                    </p>
+                    <p className="font-dancing text-xl mt-2 text-yellow-300">- Marcela</p>
                   </div>
                 </div>
               </div>
@@ -178,120 +226,282 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Emptiness Section */}
+      {/* Transformation Journey */}
       <section id="transformation" className="py-4 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
-              ¿Por qué esa "Sensación de Vacío" puede ser el portal hacia Sentirte Totalmente Plena?
+            <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
+              Tu Viaje de Transformación
             </h2>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto text-left">
-              <div className="space-y-4 text-white text-lg leading-relaxed">
-                <p>Cuando los árboles sueltan sus hojas en otoño y atraviesan un invierno en aparente vacío</p>
-                <p>No florecen, no dan frutos, parecen inertes…</p>
-                <p>Pero en ese tiempo, lo esencial ocurre bajo tierra, en las raíces.</p>
-                <p className="font-bold">Sin ese vacío aparente, no habría primavera.</p>
-                <p>El vacío en nosotras se puede extender en tiempo y/o longitud, pero siempre, siempre llegará la primavera.</p>
-                <p className="font-semibold">En nuestro hogar también vivenciarás ese vacío, la DIFERENCIA radica en:</p>
-                
-                <ul className="space-y-3 mt-6">
-                  <li className="flex items-start">
-                    <span className="mr-3 text-yellow-300 font-bold">•</span>
-                    <span>Si prefieres transitarlo acompañada o transitarlo en soledad.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-yellow-300 font-bold">•</span>
-                    <span>Quieres que se sienta como un salto cuántico o esperar y que quizás se vuelva una eternidad.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-3 text-yellow-300 font-bold">•</span>
-                    <span>Que tu proceso sea exigente pero sepas tomar acción o que el vacío se haga tan grande que sientas que no lo vas a lograr.</span>
-                  </li>
-                </ul>
+            <p className="text-xl text-white/95 max-w-2xl mx-auto">
+              En 30 días comenzarás a tomar decisiones coherentes, recuperar la confianza y dar pasos concretos hacia la vida que tu alma anhela.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-dusty-rose to-earthy-mauve rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-moon text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Reconoce tu Noche Oscura</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
+                  Identifica las señales de tu alma pidiendo transformación. Abraza la oscuridad como el primer paso hacia tu amanecer.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-soft-mauve to-powder-rose rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-feather-alt text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Conecta con tu Divinidad</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
+                  Fortalece tu conexión con los ángeles y tu guía interior. Aprende a escuchar las señales divinas que siempre han estado ahí.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-powder-rose to-dusty-rose rounded-full flex items-center justify-center mx-auto mb-6">
+                  <i className="fas fa-sun text-white text-2xl"></i>
+                </div>
+                <h3 className="text-2xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>Manifiesta tu Propósito</h3>
+                <p className="leading-relaxed" style={{color: '#f6e3eb', opacity: 0.9}}>
+                  Descubre tu misión de vida y crea una existencia alineada con tu alma. Transforma el dolor en poder interior.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What You'll Achieve */}
+      {/* What You Get */}
       <section id="community" className="py-4 px-4 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
-              ¿Qué lograrás en nuestra casita?
+            <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
+              Lo que recibirás en Shifting Souls
             </h2>
+            <p className="text-xl mb-6 text-white">
+              Una comunidad sagrada por solo <span className="font-bold text-yellow-300">$33.99/mes</span>
+            </p>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto text-left">
-              <ul className="space-y-6 text-white text-lg leading-relaxed">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-cormorant font-bold mb-4 text-white">
+                Recibe guía espiritual activa cada mes a través de:
+              </h3>
+              <ul className="text-left space-y-3 text-white">
                 <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Liberar a las futuras generaciones de cargar con el peso del trabajo personal que te corresponde a ti.</span>
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Audios canalizados con mensajes de tus guías y movimientos del alma.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Probar tu potencial y vivir a la altura de él.</span>
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Videos con ejercicios energéticos para integrar lo recibido: respiración, anclaje, visualización.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Usar tus momentos más oscuros para salir a la luz con superpoderes.</span>
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Movimientos de liberación y reconexión en portales, lunas llenas o eventos cósmicos.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Activaciones con cristales y flujos de energía para armonizar tu cuerpo y abrir tus canales.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Prácticas guiadas para integrar tu luz: movimientos conscientes, escritura, introspección.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Acompañamiento espiritual profundo alineado con la vibración energética del mes.</span>
                 </li>
               </ul>
             </div>
-            
-            <div className="mt-8">
-              <Button 
-                onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
-                className="px-12 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-xl"
-                style={{
-                  backgroundColor: '#f6e3eb',
-                  color: '#976e73',
-                  borderColor: '#f6e3eb'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#bba5a1';
-                  e.currentTarget.style.color = '#f6e3eb';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = '#f6e3eb';
-                  e.currentTarget.style.color = '#976e73';
-                }}
-              >
-                Únete a Shifting Souls - $33.99/mes
-              </Button>
-            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "fas fa-om", title: "Cápsulas de Introspección", description: "Espacios de reflexión profunda para conectar contigo misma y descubrir tu sabiduría interior" },
+              { icon: "fas fa-heart", title: "Terapias de Sanación", description: "Procesos de sanación profunda para liberar traumas y bloqueos" },
+              { icon: "fas fa-hands-praying", title: "Pregúntale a tus Ángeles", description: "Sesiones en vivo mensuales y grabadas semanales" },
+              { icon: "fas fa-users", title: "Comunidad Sagrada", description: "Conecta con otras mujeres en el mismo proceso de transformación" },
+              { icon: "fas fa-book-open", title: "Recursos Exclusivos", description: "Libros, cursos y descuentos especiales para miembros" },
+              { icon: "fas fa-calendar-check", title: "Eventos Presenciales", description: "Talleres y retiros para profundizar tu conexión espiritual" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
+                <div className="mb-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
+                      <i className={`${item.icon} text-dusty-rose text-lg`}></i>
+                    </div>
+                    <h3 className="font-semibold text-lg text-white">{item.title}</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-white/90">{item.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Final Call to Action */}
-      <section className="py-4 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center">
-            <h2 className="text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
-              Únete a esta red de mujeres que, como tú, están respondiendo al llamado de su verdad.
+      {/* Newsletter Signup */}
+      <section id="newsletter-signup" className="py-4 px-4">
+        <div className="container mx-auto max-w-2xl">
+          <div className="text-center mb-6">
+            <h2 className="text-4xl font-cormorant font-bold mb-4" style={{color: '#f6e3eb'}}>
+              Comienza tu transformación hoy
             </h2>
+            <p className="text-xl" style={{color: '#f6e3eb', opacity: 0.9}}>
+              Únete a nuestra comunidad y recibe contenido exclusivo para iniciar tu despertar espiritual
+            </p>
+          </div>
+
+          <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
+                Tu alma te está llamando
+              </h3>
+              <p className="text-sm" style={{color: '#b2ada8'}}>
+                Únete a miles de mujeres que ya están transformando su vida.
+              </p>
+              <p className="text-sm font-medium mt-2" style={{color: '#976e73'}}>
+                El cambio comienza ahora.
+              </p>
+            </div>
             
-            <Button 
-              onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
-              className="px-16 py-6 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-2xl"
-              style={{
-                backgroundColor: '#f6e3eb',
-                color: '#976e73',
-                borderColor: '#f6e3eb'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.backgroundColor = '#bba5a1';
-                e.currentTarget.style.color = '#f6e3eb';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.backgroundColor = '#f6e3eb';
-                e.currentTarget.style.color = '#976e73';
-              }}
-            >
-              Unirme a Shifting Souls - $33.99/mes
-            </Button>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="firstName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-semibold" style={{color: '#976e73'}}>Nombre *</FormLabel>
+                        <FormControl>
+                          <Input 
+                            {...field}
+                            placeholder="Tu nombre"
+                            className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="lastName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-semibold" style={{color: '#976e73'}}>Apellido</FormLabel>
+                        <FormControl>
+                          <Input 
+                            {...field}
+                            placeholder="Tu apellido"
+                            className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-semibold" style={{color: '#976e73'}}>Email *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          {...field}
+                          type="email"
+                          placeholder="tu@email.com"
+                          className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="currentMoment"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-semibold" style={{color: '#976e73'}}>¿Qué te resuena más de tu momento actual?</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white border-gray-300 text-gray-900 focus:ring-purple-500 focus:border-purple-500 shadow-sm">
+                            <SelectValue placeholder="Selecciona una opción" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="crisis-espiritual">Estoy en medio de una crisis espiritual</SelectItem>
+                          <SelectItem value="busco-proposito">Busco mi propósito de vida</SelectItem>
+                          <SelectItem value="conectar-angeles">Quiero conectar con mis ángeles</SelectItem>
+                          <SelectItem value="transformar-dolor">Necesito transformar mi dolor</SelectItem>
+                          <SelectItem value="comunidad-espiritual">Busco una comunidad espiritual</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="terms"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="border-gray-400 text-purple-600 focus:ring-purple-500"
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel className="font-medium text-sm" style={{color: '#b2ada8'}}>
+                          Acepto recibir información sobre Shifting Souls y entiendo que puedo cancelar mi suscripción en cualquier momento.
+                        </FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+
+                <Button 
+                  type="submit" 
+                  disabled={subscriptionMutation.isPending}
+                  className="w-full text-white font-bold py-4 px-8 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  style={{
+                    background: "linear-gradient(to right, #ae667d, #976e73)",
+                    boxShadow: "0 10px 25px rgba(174, 102, 125, 0.3)"
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to right, #976e73, #b09196)";
+                    e.currentTarget.style.boxShadow = "0 15px 35px rgba(174, 102, 125, 0.4)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = "linear-gradient(to right, #ae667d, #976e73)";
+                    e.currentTarget.style.boxShadow = "0 10px 25px rgba(174, 102, 125, 0.3)";
+                  }}
+                >
+                  {subscriptionMutation.isPending ? (
+                    <i className="fas fa-spinner fa-spin mr-2"></i>
+                  ) : (
+                    <i className="fas fa-feather-alt mr-2"></i>
+                  )}
+                  {subscriptionMutation.isPending ? "Procesando..." : "Iniciar Mi Transformación"}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
       </section>
