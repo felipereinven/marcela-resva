@@ -188,23 +188,23 @@ export default function Landing() {
           </div>
 
           {/* Video and Form Section */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Left Column - Video */}
-            <div className="relative">
+            <div className="relative flex flex-col">
               <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-              <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+              <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl flex-1 flex items-center">
                 <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
               </div>
             </div>
 
             {/* Right Column - Form */}
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col">
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-cormorant font-bold text-white">
                   ¡Regístrate aquí!
                 </h3>
               </div>
-              <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
+              <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl flex-1">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
                     Tu alma te está llamando
