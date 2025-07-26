@@ -124,119 +124,176 @@ export default function Landing() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-4 px-4 relative z-10">
-        <div className="container mx-auto max-w-4xl">
-          <div className="space-y-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="space-y-6 text-left lg:text-left">
-                <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Recibe 3 regalos al registrarte</h2>
-                <h1 className="text-4xl lg:text-5xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
-                  Transforma tu crisis espiritual en{" "}
-                  <span className="font-bold drop-shadow-lg bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
-                    despertar consciente
-                  </span>
-                </h1>
-                <p className="text-lg text-white/95 leading-relaxed">
-                  Únete gratis y recibe herramientas poderosas para reconectar con tu divinidad y descubrir tu misión de vida.
-                </p>
+        <div className="container mx-auto max-w-6xl">
+          {/* Centered Title Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-xl font-dancing mb-4" style={{color: '#f6e3eb'}}>Recibe 3 regalos al registrarte</h2>
+            <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
+              Transforma tu crisis espiritual en{" "}
+              <span className="font-bold drop-shadow-lg bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+                despertar consciente
+              </span>
+            </h1>
+            <p className="text-lg text-white/95 leading-relaxed max-w-3xl mx-auto">
+              Únete gratis y recibe herramientas poderosas para reconectar con tu divinidad y descubrir tu misión de vida.
+            </p>
+          </div>
+
+          {/* Video and Form Section */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Video */}
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
+              <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+                <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
+              </div>
+            </div>
+
+            {/* Right Column - Form */}
+            <div className="relative z-10">
+              <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
+                    Tu alma te está llamando
+                  </h3>
+                  <p className="text-sm" style={{color: '#b2ada8'}}>
+                    Únete a miles de mujeres que ya están transformando su vida.
+                  </p>
+                  <p className="text-sm font-medium mt-2" style={{color: '#976e73'}}>
+                    El cambio comienza ahora.
+                  </p>
+                </div>
                 
-                {/* Newsletter Form */}
-                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl">
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="firstName" className="text-sm font-medium text-white">
-                          Nombre
-                        </label>
-                        <input
-                          {...form.register("firstName")}
-                          type="text"
-                          className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
-                          placeholder="Tu nombre"
-                        />
-                        {form.formState.errors.firstName && (
-                          <p className="text-red-300 text-sm">{form.formState.errors.firstName.message}</p>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="firstName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="font-semibold" style={{color: '#976e73'}}>Nombre *</FormLabel>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Tu nombre"
+                                className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
                         )}
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="lastName" className="text-sm font-medium text-white">
-                          Apellido
-                        </label>
-                        <input
-                          {...form.register("lastName")}
-                          type="text"
-                          className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
-                          placeholder="Tu apellido"
-                        />
-                        {form.formState.errors.lastName && (
-                          <p className="text-red-300 text-sm">{form.formState.errors.lastName.message}</p>
+                      />
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="font-semibold" style={{color: '#976e73'}}>Apellido</FormLabel>
+                            <FormControl>
+                              <Input 
+                                {...field}
+                                placeholder="Tu apellido"
+                                className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
                         )}
-                      </div>
+                      />
                     </div>
                     
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-white">
-                        Email
-                      </label>
-                      <input
-                        {...form.register("email")}
-                        type="email"
-                        className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
-                        placeholder="tu@email.com"
-                      />
-                      {form.formState.errors.email && (
-                        <p className="text-red-300 text-sm">{form.formState.errors.email.message}</p>
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-semibold" style={{color: '#976e73'}}>Email *</FormLabel>
+                          <FormControl>
+                            <Input 
+                              {...field}
+                              type="email"
+                              placeholder="tu@email.com"
+                              className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
                       )}
-                    </div>
+                    />
 
-                    <div className="space-y-2">
-                      <label htmlFor="currentMoment" className="text-sm font-medium text-white">
-                        ¿En qué momento espiritual te encuentras?
-                      </label>
-                      <select
-                        {...form.register("currentMoment")}
-                        className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800"
-                      >
-                        <option value="">Selecciona una opción</option>
-                        <option value="beginning">Comenzando mi despertar espiritual</option>
-                        <option value="crisis">En medio de una crisis espiritual</option>
-                        <option value="seeking">Buscando mi propósito de vida</option>
-                        <option value="healing">Sanando heridas del pasado</option>
-                        <option value="growing">Creciendo espiritualmente</option>
-                      </select>
-                      {form.formState.errors.currentMoment && (
-                        <p className="text-red-300 text-sm">{form.formState.errors.currentMoment.message}</p>
+                    <FormField
+                      control={form.control}
+                      name="currentMoment"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-semibold" style={{color: '#976e73'}}>¿Qué te resuena más de tu momento actual?</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="bg-white border-gray-300 text-gray-900 focus:ring-purple-500 focus:border-purple-500 shadow-sm">
+                                <SelectValue placeholder="Selecciona una opción" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="crisis-espiritual">Estoy en medio de una crisis espiritual</SelectItem>
+                              <SelectItem value="busco-proposito">Busco mi propósito de vida</SelectItem>
+                              <SelectItem value="conectar-angeles">Quiero conectar con mis ángeles</SelectItem>
+                              <SelectItem value="transformar-dolor">Necesito transformar mi dolor</SelectItem>
+                              <SelectItem value="comunidad-espiritual">Busco una comunidad espiritual</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
                       )}
-                    </div>
+                    />
 
-                    <Button
-                      type="submit"
+                    <FormField
+                      control={form.control}
+                      name="terms"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              className="border-gray-400 text-purple-600 focus:ring-purple-500"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="font-medium text-sm" style={{color: '#b2ada8'}}>
+                              Acepto recibir información sobre Shifting Souls y entiendo que puedo cancelar mi suscripción en cualquier momento.
+                            </FormLabel>
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit" 
                       disabled={subscriptionMutation.isPending}
-                      className="w-full py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      className="w-full text-white font-bold py-4 px-8 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                       style={{
-                        backgroundColor: '#f6e3eb',
-                        color: '#976e73'
+                        background: "linear-gradient(to right, #ae667d, #976e73)",
+                        boxShadow: "0 10px 25px rgba(174, 102, 125, 0.3)"
                       }}
                       onMouseOver={(e) => {
-                        e.currentTarget.style.backgroundColor = '#bba5a1';
-                        e.currentTarget.style.color = '#f6e3eb';
+                        e.currentTarget.style.background = "linear-gradient(to right, #976e73, #b09196)";
+                        e.currentTarget.style.boxShadow = "0 15px 35px rgba(174, 102, 125, 0.4)";
                       }}
                       onMouseOut={(e) => {
-                        e.currentTarget.style.backgroundColor = '#f6e3eb';
-                        e.currentTarget.style.color = '#976e73';
+                        e.currentTarget.style.background = "linear-gradient(to right, #ae667d, #976e73)";
+                        e.currentTarget.style.boxShadow = "0 10px 25px rgba(174, 102, 125, 0.3)";
                       }}
                     >
-                      {subscriptionMutation.isPending ? "Registrando..." : "Recibir Mis 3 Regalos Gratis"}
+                      {subscriptionMutation.isPending ? (
+                        <i className="fas fa-spinner fa-spin mr-2"></i>
+                      ) : (
+                        <i className="fas fa-feather-alt mr-2"></i>
+                      )}
+                      {subscriptionMutation.isPending ? "Procesando..." : "Iniciar Mi Transformación"}
                     </Button>
                   </form>
-                </div>
-              </div>
-
-              {/* Video Section */}
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                  <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
-                </div>
+                </Form>
               </div>
             </div>
           </div>
