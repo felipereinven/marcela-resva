@@ -28,31 +28,16 @@ export default function ThankYou() {
             </p>
           </div>
 
-          <div className="relative mb-12">
-            <div className="absolute -inset-4 bg-gradient-to-r from-dusty-rose/30 to-earthy-mauve/30 rounded-3xl blur-2xl"></div>
-            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-              <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
-            </div>
-          </div>
+
 
           <div className="text-center space-y-8">
             <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <h2 className="text-3xl font-cormorant font-bold text-white mb-4">
-                Tu próximo paso
+                ¡Ya eres parte de Shifting Souls!
               </h2>
               <p className="text-white/95 mb-6">
-                Únete a nuestro grupo de WhatsApp donde compartimos inspiración diaria, respuestas a preguntas frecuentes y conectamos con otras almas en transformación.
+                Tu transformación espiritual ha comenzado. Pronto recibirás contenido exclusivo y todo lo que necesitas para tu proceso de evolución.
               </p>
-              
-              <Button
-                asChild
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-              >
-                <a href={whatsappGroupUrl} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-whatsapp text-2xl mr-3"></i>
-                  Únete al Grupo de WhatsApp
-                </a>
-              </Button>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">

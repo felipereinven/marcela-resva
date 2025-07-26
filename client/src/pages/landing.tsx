@@ -125,103 +125,213 @@ export default function Landing() {
       {/* Hero Section */}
       <section className="pt-24 pb-4 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
-          <div className="space-y-8 text-center">
-              <div className="space-y-6">
-                <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Bienvenida al despertar</h2>
-                <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
-                  Convierte tu{" "}
-                  <span className="font-bold drop-shadow-lg bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">
-                    noche oscura
+          <div className="space-y-8">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6 text-left lg:text-left">
+                <h2 className="text-xl font-dancing" style={{color: '#f6e3eb'}}>Recibe 3 regalos al registrarte</h2>
+                <h1 className="text-4xl lg:text-5xl font-cormorant font-bold leading-tight" style={{color: '#f6e3eb'}}>
+                  Transforma tu crisis espiritual en{" "}
+                  <span className="font-bold drop-shadow-lg bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+                    despertar consciente
                   </span>
-                  {" "}en el amanecer de tu propósito
                 </h1>
-                <p className="text-xl text-white/95 leading-relaxed">
-                  Acompaño a mujeres que se encuentran en medio de una crisis espiritual a reconectar con su divinidad, descubrir su misión de vida y transformar el dolor en poder interior.
+                <p className="text-lg text-white/95 leading-relaxed">
+                  Únete gratis y recibe herramientas poderosas para reconectar con tu divinidad y descubrir tu misión de vida.
                 </p>
+                
+                {/* Newsletter Form */}
+                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-xl">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label htmlFor="firstName" className="text-sm font-medium text-white">
+                          Nombre
+                        </label>
+                        <input
+                          {...form.register("firstName")}
+                          type="text"
+                          className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
+                          placeholder="Tu nombre"
+                        />
+                        {form.formState.errors.firstName && (
+                          <p className="text-red-300 text-sm">{form.formState.errors.firstName.message}</p>
+                        )}
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="lastName" className="text-sm font-medium text-white">
+                          Apellido
+                        </label>
+                        <input
+                          {...form.register("lastName")}
+                          type="text"
+                          className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
+                          placeholder="Tu apellido"
+                        />
+                        {form.formState.errors.lastName && (
+                          <p className="text-red-300 text-sm">{form.formState.errors.lastName.message}</p>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium text-white">
+                        Email
+                      </label>
+                      <input
+                        {...form.register("email")}
+                        type="email"
+                        className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800 placeholder-gray-500"
+                        placeholder="tu@email.com"
+                      />
+                      {form.formState.errors.email && (
+                        <p className="text-red-300 text-sm">{form.formState.errors.email.message}</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="currentMoment" className="text-sm font-medium text-white">
+                        ¿En qué momento espiritual te encuentras?
+                      </label>
+                      <select
+                        {...form.register("currentMoment")}
+                        className="w-full px-4 py-3 bg-white/90 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-dusty-rose/50 text-gray-800"
+                      >
+                        <option value="">Selecciona una opción</option>
+                        <option value="beginning">Comenzando mi despertar espiritual</option>
+                        <option value="crisis">En medio de una crisis espiritual</option>
+                        <option value="seeking">Buscando mi propósito de vida</option>
+                        <option value="healing">Sanando heridas del pasado</option>
+                        <option value="growing">Creciendo espiritualmente</option>
+                      </select>
+                      {form.formState.errors.currentMoment && (
+                        <p className="text-red-300 text-sm">{form.formState.errors.currentMoment.message}</p>
+                      )}
+                    </div>
+
+                    <Button
+                      type="submit"
+                      disabled={subscriptionMutation.isPending}
+                      className="w-full py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        backgroundColor: '#f6e3eb',
+                        color: '#976e73'
+                      }}
+                      onMouseOver={(e) => {
+                        e.currentTarget.style.backgroundColor = '#bba5a1';
+                        e.currentTarget.style.color = '#f6e3eb';
+                      }}
+                      onMouseOut={(e) => {
+                        e.currentTarget.style.backgroundColor = '#f6e3eb';
+                        e.currentTarget.style.color = '#976e73';
+                      }}
+                    >
+                      {subscriptionMutation.isPending ? "Registrando..." : "Recibir Mis 3 Regalos Gratis"}
+                    </Button>
+                  </form>
+                </div>
               </div>
 
               {/* Video Section */}
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
                 <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                  <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
+                  <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={() => scrollToSection('newsletter-signup')}
-                  className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2"
-                  style={{
-                    backgroundColor: '#f6e3eb',
-                    color: '#976e73',
-                    borderColor: '#f6e3eb'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.backgroundColor = '#bba5a1';
-                    e.currentTarget.style.color = '#f6e3eb';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.backgroundColor = '#f6e3eb';
-                    e.currentTarget.style.color = '#976e73';
-                  }}
-                >
-                  Comenzar Mi Transformación
-                </Button>
-                <Button 
-                  variant="outline"
-                  onClick={() => scrollToSection('transformation')}
-                  className="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 border-2 bg-transparent"
-                  style={{
-                    borderColor: '#f6e3eb',
-                    color: '#f6e3eb'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.backgroundColor = '#f6e3eb';
-                    e.currentTarget.style.color = '#976e73';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = '#f6e3eb';
-                  }}
-                >
-                  Conoce el Proceso
-                </Button>
-              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="flex items-center justify-center space-x-8 pt-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">3000+</div>
-                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Almas transformadas</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">30</div>
-                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Días para cambiar</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">24/7</div>
-                  <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Apoyo divino</div>
-                </div>
-              </div>
+      {/* 3 Gifts Section */}
+      <section className="py-4 px-4 relative z-10">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
+              Estos son los 3 regalos que recibirás al registrarte
+            </h2>
+            <p className="text-xl text-white/95 mb-8">
+              Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
+            </p>
+          </div>
 
-              {/* Testimonial Section */}
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                  <img 
-                    src={marcelaPhoto} 
-                    alt="Marcela - Transformación espiritual" 
-                    className="w-full h-[500px] object-cover object-top rounded-2xl" 
-                  />
-                  
-                  <div className="mt-6 text-center">
-                    <p className="text-white font-medium text-lg">
-                      "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
-                    </p>
-                    <p className="font-dancing text-xl mt-2 text-yellow-300">- Marcela</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { 
+                icon: "fas fa-gift", 
+                title: "Meditación Guiada de Reconexión", 
+                description: "Audio exclusivo de 20 minutos para conectar con tu divinidad interior y encontrar paz en medio de la crisis" 
+              },
+              { 
+                icon: "fas fa-book-open", 
+                title: "Guía PDF: Primeros Pasos del Despertar", 
+                description: "Manual práctico con ejercicios y técnicas para navegar tu proceso de transformación espiritual" 
+              },
+              { 
+                icon: "fas fa-heart", 
+                title: "Acceso a Sesión en Vivo", 
+                description: "Invitación especial a nuestra próxima sesión 'Pregúntale a tus Ángeles' donde podrás hacer tus preguntas" 
+              }
+            ].map((gift, index) => (
+              <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className={`${gift.icon} text-white text-2xl`}></i>
                   </div>
+                  <h3 className="text-xl font-cormorant font-bold text-white mb-3">{gift.title}</h3>
+                  <p className="text-white/90 leading-relaxed">{gift.description}</p>
                 </div>
               </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-lg text-yellow-300 font-semibold">
+              ¡Todo esto es completamente GRATIS al registrarte!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-4 px-4 relative z-10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex items-center justify-center space-x-8 pt-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">3000+</div>
+              <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Almas transformadas</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">30</div>
+              <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Días para cambiar</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold bg-gradient-to-r from-gray-900 via-black to-gray-800 bg-clip-text text-transparent">24/7</div>
+              <div className="text-sm font-medium" style={{color: '#f6e3eb', opacity: 0.9}}>Apoyo divino</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="py-4 px-4 relative z-10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
+            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+              <img 
+                src={marcelaPhoto} 
+                alt="Marcela - Transformación espiritual" 
+                className="w-full h-[500px] object-cover object-top rounded-2xl" 
+              />
+              
+              <div className="mt-6 text-center">
+                <p className="text-white font-medium text-lg">
+                  "Mi proceso de Sanación me enseñó que puedo usar mis momentos más oscuros para salir a la luz con super poderes"
+                </p>
+                <p className="font-dancing text-xl mt-2 text-yellow-300">- Marcela</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
