@@ -185,15 +185,16 @@ export default function Landing() {
               ))}
             </div>
 
-            <div className="text-center">
-              <p className="text-lg text-yellow-300 font-semibold">
-                ¡Todo esto es completamente GRATIS al registrarte!
-              </p>
-            </div>
           </div>
 
           {/* Video and Form Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Registration Call to Action - positioned above form on mobile */}
+            <div className="lg:hidden text-center mb-6">
+              <p className="text-lg text-yellow-300 font-semibold">
+                ¡Registrate aquí!
+              </p>
+            </div>
             {/* Left Column - Video */}
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
@@ -204,6 +205,12 @@ export default function Landing() {
 
             {/* Right Column - Form */}
             <div className="relative z-10">
+              {/* Registration Call to Action - positioned above form on desktop, aligned right */}
+              <div className="hidden lg:block text-right mb-6">
+                <p className="text-lg text-yellow-300 font-semibold">
+                  ¡Registrate aquí!
+                </p>
+              </div>
               <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
