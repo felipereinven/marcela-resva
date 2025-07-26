@@ -168,7 +168,7 @@ export default function Landing() {
                   description: "Acceso a oportunidades únicas en mi comunidad espiritual" 
                 },
                 { 
-                  icon: "fas fa-surprise", 
+                  icon: "fas fa-gift", 
                   title: "Regalo Sorpresa", 
                   description: "Una herramienta especial para darle la vuelta al dolor que estás viviendo" 
                 }
