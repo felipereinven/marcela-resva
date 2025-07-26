@@ -121,7 +121,13 @@ export default function MembresiaPage() {
                 </p>
               </div>
 
-
+              {/* Video Section */}
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
+                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+                  <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
+                </div>
+              </div>
 
               {/* Story Section */}
               <div className="relative">
