@@ -207,7 +207,7 @@ export default function MembresiaPage() {
                   <div 
                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                     style={{
-                      background: 'linear-gradient(to bottom right, #976e73, #ae667d)'
+                      background: 'linear-gradient(to bottom right, #ae667d, #b09196)'
                     }}
                   >
                     <i className="fas fa-heart text-white text-2xl"></i>
@@ -223,7 +223,7 @@ export default function MembresiaPage() {
                   <div 
                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                     style={{
-                      background: 'linear-gradient(to bottom right, #b2ada8, #bba5a1)'
+                      background: 'linear-gradient(to bottom right, #ae667d, #b09196)'
                     }}
                   >
                     <i className="fas fa-star text-white text-2xl"></i>
