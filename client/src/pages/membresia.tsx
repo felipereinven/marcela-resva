@@ -121,14 +121,7 @@ export default function MembresiaPage() {
                 </p>
               </div>
 
-              {/* Video Section */}
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-                <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-                  <VimeoPlayer videoId="1101675966" title="Bienvenida Comunidad" />
-                </div>
-              </div>
-              
+
 
               {/* Story Section */}
               <div className="relative">
@@ -202,27 +195,45 @@ export default function MembresiaPage() {
 
       {/* What You'll Achieve */}
       <section id="community" className="py-4 px-4 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
               ¿Qué lograrás en nuestra casita?
             </h2>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto text-left">
-              <ul className="space-y-6 text-white text-lg leading-relaxed">
-                <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Liberar a las futuras generaciones de cargar con el peso del trabajo personal que te corresponde a ti.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Probar tu potencial y vivir a la altura de él.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-4 text-yellow-300 font-bold text-xl">•</span>
-                  <span>Usar tus momentos más oscuros para salir a la luz con superpoderes.</span>
-                </li>
-              </ul>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-heart text-white text-2xl"></i>
+                  </div>
+                  <p className="leading-relaxed text-white text-lg">
+                    Liberar a las futuras generaciones de cargar con el peso del trabajo personal que te corresponde a ti.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-star text-white text-2xl"></i>
+                  </div>
+                  <p className="leading-relaxed text-white text-lg">
+                    Probar tu potencial y vivir a la altura de él.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i className="fas fa-bolt text-white text-2xl"></i>
+                  </div>
+                  <p className="leading-relaxed text-white text-lg">
+                    Usar tus momentos más oscuros para salir a la luz con superpoderes.
+                  </p>
+                </div>
+              </div>
             </div>
             
             <div className="mt-8">
