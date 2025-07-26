@@ -143,29 +143,34 @@ export default function Landing() {
           <div className="mb-12">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
-                Estos son los 3 regalos que recibirás al registrarte
+                Estos son los 4 regalos que recibirás al registrarte
               </h2>
               <p className="text-xl text-white/95 mb-8">
                 Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {[
                 { 
-                  icon: "fas fa-gift", 
-                  title: "Meditación Guiada de Reconexión", 
-                  description: "Audio exclusivo de 20 minutos para conectar con tu divinidad interior y encontrar paz en medio de la crisis" 
+                  icon: "fas fa-play-circle", 
+                  title: "Audio de 8 Minutos", 
+                  description: "Los 3 pilares para establecer límites y dejar de postergar la vida que anhelas" 
                 },
                 { 
-                  icon: "fas fa-book-open", 
-                  title: "Guía PDF: Primeros Pasos del Despertar", 
-                  description: "Manual práctico con ejercicios y técnicas para navegar tu proceso de transformación espiritual" 
+                  icon: "fas fa-rocket", 
+                  title: "Cápsulas de Acción", 
+                  description: "Impulsos continuos en tu bandeja de entrada que te llevarán a actuar" 
                 },
                 { 
-                  icon: "fas fa-heart", 
-                  title: "Acceso a Sesión en Vivo", 
-                  description: "Invitación especial a nuestra próxima sesión 'Pregúntale a tus Ángeles' donde podrás hacer tus preguntas" 
+                  icon: "fas fa-users", 
+                  title: "Comunidad Shifting Souls", 
+                  description: "Acceso a oportunidades únicas en mi comunidad espiritual" 
+                },
+                { 
+                  icon: "fas fa-surprise", 
+                  title: "Regalo Sorpresa", 
+                  description: "Una herramienta especial para darle la vuelta al dolor que estás viviendo" 
                 }
               ].map((gift, index) => (
                 <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
@@ -355,9 +360,9 @@ export default function Landing() {
       {/* Footer */}
       <footer className="bg-black/30 backdrop-blur-lg border-t border-white/20 py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
+          <div className="flex justify-center">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-4">
                 <img 
                   src={shiftingSoulsLogo} 
                   alt="Shifting Souls Logo" 
@@ -368,28 +373,6 @@ export default function Landing() {
               <p className="text-white/70 text-sm">
                 Acompañando a mujeres en su transformación espiritual hacia una vida alineada con su alma.
               </p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Conecta Conmigo</h4>
-              <div className="space-y-2">
-                <a href="mailto:info@marcelaresva.com" className="text-white/70 hover:text-dusty-rose transition-colors text-sm block">
-                  <i className="fas fa-envelope mr-2"></i>
-                  info@marcelaresva.com
-                </a>
-                <a href="https://www.instagram.com/shiftingsouls" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-dusty-rose transition-colors text-sm block">
-                  <i className="fab fa-instagram mr-2"></i>
-                  @shiftingsouls
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Testimonios</h4>
-              <blockquote className="text-white/70 text-sm italic">
-                "Marcela me ayudó a encontrar mi camino cuando todo parecía perdido. Su guía es pura magia."
-              </blockquote>
-              <cite className="text-dusty-rose text-sm block mt-2">- Ana M.</cite>
             </div>
           </div>
 
