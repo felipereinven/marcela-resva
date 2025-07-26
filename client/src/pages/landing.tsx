@@ -143,7 +143,7 @@ export default function Landing() {
           <div className="mb-12">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
-                Estos son los 4 regalos que recibirás al registrarte
+                Regístrate hoy y recibe
               </h2>
               <p className="text-xl text-white/95 mb-8">
                 Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
