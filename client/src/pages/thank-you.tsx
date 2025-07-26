@@ -42,21 +42,27 @@ export default function ThankYou() {
 
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-envelope text-dusty-rose text-2xl mb-4"></i>
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-envelope text-white text-2xl"></i>
+                </div>
                 <h3 className="text-white font-semibold mb-2">Revisa tu Email</h3>
                 <p className="text-white/95 text-sm">Recibirás un email de confirmación con los próximos pasos</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-calendar text-dusty-rose text-2xl mb-4"></i>
-                <h3 className="text-white font-semibold mb-2">Próxima Sesión</h3>
-                <p className="text-white/95 text-sm">Sesión "Pregúntale a tus Ángeles" este viernes a las 7 PM</p>
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-book-open text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">Guía PDF Gratuita</h3>
+                <p className="text-white/95 text-sm">Manual con ejercicios prácticos para tu despertar espiritual</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <i className="fas fa-gift text-dusty-rose text-2xl mb-4"></i>
-                <h3 className="text-white font-semibold mb-2">Regalo de Bienvenida</h3>
-                <p className="text-white/95 text-sm">Meditación guiada gratuita en tu bandeja de entrada</p>
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-gift text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">Meditación Guiada</h3>
+                <p className="text-white/95 text-sm">Audio exclusivo de reconexión con tu divinidad interior</p>
               </div>
             </div>
           </div>
