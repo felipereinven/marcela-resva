@@ -276,6 +276,75 @@ export default function MembresiaPage() {
         </div>
       </section>
 
+      {/* What You Get */}
+      <section className="py-4 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
+              Lo que recibirás en Shifting Souls
+            </h2>
+            <p className="text-xl mb-6 text-white">
+              Una comunidad sagrada por solo <span className="font-bold text-yellow-300">$33.99/mes</span>
+            </p>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-cormorant font-bold mb-4 text-white">
+                Recibe guía espiritual activa cada mes a través de:
+              </h3>
+              <ul className="text-left space-y-3 text-white">
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Audios canalizados con mensajes de tus guías y movimientos del alma.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Videos con ejercicios energéticos para integrar lo recibido: respiración, anclaje, visualización.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Movimientos de liberación y reconexión en portales, lunas llenas o eventos cósmicos.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Activaciones con cristales y flujos de energía para armonizar tu cuerpo y abrir tus canales.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Prácticas guiadas para integrar tu luz: movimientos conscientes, escritura, introspección.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 text-yellow-300 font-bold">•</span>
+                  <span>Acompañamiento espiritual profundo alineado con la vibración energética del mes.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "fas fa-om", title: "Cápsulas de Introspección", description: "Espacios de reflexión profunda para conectar contigo misma y descubrir tu sabiduría interior" },
+              { icon: "fas fa-heart", title: "Terapias de Sanación", description: "Procesos de sanación profunda para liberar traumas y bloqueos" },
+              { icon: "fas fa-hands-praying", title: "Pregúntale a tus Ángeles", description: "Sesiones en vivo mensuales y grabadas semanales" },
+              { icon: "fas fa-users", title: "Comunidad Sagrada", description: "Conecta con otras mujeres en el mismo proceso de transformación" },
+              { icon: "fas fa-book-open", title: "Recursos Exclusivos", description: "Libros, cursos y descuentos especiales para miembros" },
+              { icon: "fas fa-calendar-check", title: "Eventos Presenciales", description: "Talleres y retiros para profundizar tu conexión espiritual" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
+                <div className="mb-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-white/20 to-white/30 rounded-full flex items-center justify-center mr-3">
+                      <i className={`${item.icon} text-lg`} style={{color: '#ae667d'}}></i>
+                    </div>
+                    <h3 className="font-semibold text-lg text-white">{item.title}</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-white/90">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final Call to Action */}
       <section className="py-4 px-4">
         <div className="container mx-auto max-w-4xl">
