@@ -196,7 +196,7 @@ export default function Landing() {
               </p>
             </div>
             {/* Left Column - Video */}
-            <div className="relative">
+            <div className="relative pt-12">
               <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
               <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
                 <VimeoPlayer videoId="1101676211" title="Landing page Aprobada" />
@@ -205,8 +205,8 @@ export default function Landing() {
 
             {/* Right Column - Form */}
             <div className="relative z-10">
-              {/* Registration Call to Action - positioned above form on desktop, aligned right */}
-              <div className="hidden lg:block text-right mb-6">
+              {/* Registration Call to Action - positioned above form on desktop, centered */}
+              <div className="hidden lg:block text-center mb-6">
                 <p className="text-lg text-yellow-300 font-semibold">
                   ¡Registrate aquí!
                 </p>
