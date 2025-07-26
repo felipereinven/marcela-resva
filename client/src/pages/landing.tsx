@@ -185,11 +185,6 @@ export default function Landing() {
               ))}
             </div>
 
-            <div className="text-center">
-              <p className="text-lg text-yellow-300 font-semibold">
-                ¡Todo esto es completamente GRATIS al registrarte!
-              </p>
-            </div>
           </div>
 
           {/* Video and Form Section */}
@@ -204,6 +199,11 @@ export default function Landing() {
 
             {/* Right Column - Form */}
             <div className="relative z-10">
+              <div className="text-center mb-6">
+                <h3 className="text-3xl font-cormorant font-bold text-white">
+                  ¡Regístrate aquí!
+                </h3>
+              </div>
               <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
