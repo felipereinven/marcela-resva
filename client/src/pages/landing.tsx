@@ -139,6 +139,54 @@ export default function Landing() {
             </p>
           </div>
 
+          {/* 3 Gifts Section */}
+          <div className="mb-12">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
+                Estos son los 3 regalos que recibirás al registrarte
+              </h2>
+              <p className="text-xl text-white/95 mb-8">
+                Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {[
+                { 
+                  icon: "fas fa-gift", 
+                  title: "Meditación Guiada de Reconexión", 
+                  description: "Audio exclusivo de 20 minutos para conectar con tu divinidad interior y encontrar paz en medio de la crisis" 
+                },
+                { 
+                  icon: "fas fa-book-open", 
+                  title: "Guía PDF: Primeros Pasos del Despertar", 
+                  description: "Manual práctico con ejercicios y técnicas para navegar tu proceso de transformación espiritual" 
+                },
+                { 
+                  icon: "fas fa-heart", 
+                  title: "Acceso a Sesión en Vivo", 
+                  description: "Invitación especial a nuestra próxima sesión 'Pregúntale a tus Ángeles' donde podrás hacer tus preguntas" 
+                }
+              ].map((gift, index) => (
+                <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className={`${gift.icon} text-white text-2xl`}></i>
+                    </div>
+                    <h3 className="text-xl font-cormorant font-bold text-white mb-3">{gift.title}</h3>
+                    <p className="text-white/90 leading-relaxed">{gift.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <p className="text-lg text-yellow-300 font-semibold">
+                ¡Todo esto es completamente GRATIS al registrarte!
+              </p>
+            </div>
+          </div>
+
           {/* Video and Form Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Video */}
@@ -290,56 +338,6 @@ export default function Landing() {
                 </Form>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 Gifts Section */}
-      <section className="py-4 px-4 relative z-10">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
-              Estos son los 3 regalos que recibirás al registrarte
-            </h2>
-            <p className="text-xl text-white/95 mb-8">
-              Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { 
-                icon: "fas fa-gift", 
-                title: "Meditación Guiada de Reconexión", 
-                description: "Audio exclusivo de 20 minutos para conectar con tu divinidad interior y encontrar paz en medio de la crisis" 
-              },
-              { 
-                icon: "fas fa-book-open", 
-                title: "Guía PDF: Primeros Pasos del Despertar", 
-                description: "Manual práctico con ejercicios y técnicas para navegar tu proceso de transformación espiritual" 
-              },
-              { 
-                icon: "fas fa-heart", 
-                title: "Acceso a Sesión en Vivo", 
-                description: "Invitación especial a nuestra próxima sesión 'Pregúntale a tus Ángeles' donde podrás hacer tus preguntas" 
-              }
-            ].map((gift, index) => (
-              <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className={`${gift.icon} text-white text-2xl`}></i>
-                  </div>
-                  <h3 className="text-xl font-cormorant font-bold text-white mb-3">{gift.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{gift.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-lg text-yellow-300 font-semibold">
-              ¡Todo esto es completamente GRATIS al registrarte!
-            </p>
           </div>
         </div>
       </section>
