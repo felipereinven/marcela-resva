@@ -128,7 +128,7 @@ export default function Landing() {
           {/* Centered Title Section */}
           <div className="text-center mb-12">
             <h2 className="text-xl font-dancing mb-4" style={{color: '#f6e3eb'}}>Recibe 3 regalos al registrarte</h2>
-            <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
+            <h1 className="text-4xl lg:text-5xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
               Transforma tu crisis espiritual en{" "}
               <span className="font-bold drop-shadow-lg bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
                 despertar consciente
