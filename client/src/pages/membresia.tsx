@@ -87,7 +87,7 @@ export default function MembresiaPage() {
               <img 
                 src={shiftingSoulsLogo} 
                 alt="Shifting Souls" 
-                className="w-12 h-12 rounded-full object-cover border-2 border-white/30"
+                className="w-12 h-12 object-cover"
               />
               <span className="text-2xl font-cormorant font-bold" style={{color: '#f6e3eb'}}>
                 Shifting Souls
@@ -260,7 +260,7 @@ export default function MembresiaPage() {
             <div className="mt-8">
               <Button 
                 onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
-                className="px-12 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-xl"
+                className="px-6 md:px-12 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg md:text-xl"
                 style={{
                   backgroundColor: '#f6e3eb',
                   color: '#976e73',
@@ -275,7 +275,8 @@ export default function MembresiaPage() {
                   e.currentTarget.style.color = '#976e73';
                 }}
               >
-                Únete a Shifting Souls - $33.99/mes
+                <span className="block sm:hidden">Únete - $33.99/mes</span>
+                <span className="hidden sm:block">Únete a Shifting Souls - $33.99/mes</span>
               </Button>
             </div>
           </div>
@@ -361,7 +362,7 @@ export default function MembresiaPage() {
             
             <Button 
               onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
-              className="px-16 py-6 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-2xl"
+              className="px-8 md:px-16 py-4 md:py-6 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg md:text-2xl"
               style={{
                 backgroundColor: '#f6e3eb',
                 color: '#976e73',
@@ -376,7 +377,8 @@ export default function MembresiaPage() {
                 e.currentTarget.style.color = '#976e73';
               }}
             >
-              Unirme a Shifting Souls - $33.99/mes
+              <span className="block sm:hidden">Unirme - $33.99/mes</span>
+              <span className="hidden sm:block">Unirme a Shifting Souls - $33.99/mes</span>
             </Button>
           </div>
         </div>
