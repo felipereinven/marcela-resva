@@ -10,7 +10,7 @@ export default function ThankYou() {
     <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
       
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-8 md:py-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
@@ -40,7 +40,7 @@ export default function ThankYou() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-8 md:mb-0">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-envelope text-white text-2xl"></i>
