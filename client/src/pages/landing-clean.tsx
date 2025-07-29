@@ -149,12 +149,12 @@ export default function Landing() {
               {[
                 { 
                   icon: "fas fa-microphone", 
-                  title: "El Audio Canalizado", 
+                  title: "Audio Canalizado", 
                   description: "De 2 minutos y 16 segundos que la divinidad te entrega hoy. Es la apertura a que te des el permiso de abrir puertas donde antes había muros." 
                 },
                 { 
                   icon: "fas fa-video", 
-                  title: "El video La Energía del Pétalo", 
+                  title: "Video La Energía del Pétalo", 
                   description: "Es la continuidad del audio canalizado para conectar tu ser a tu voz y a tu corazón." 
                 },
                 { 
