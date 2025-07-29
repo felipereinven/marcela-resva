@@ -182,6 +182,13 @@ export default function Landing() {
 
           </div>
 
+          {/* Center Text above Video and Form Section */}
+          <div className="text-center mb-8">
+            <p className="text-xl text-yellow-300 font-semibold">
+              Siente el llamado de tu corazón
+            </p>
+          </div>
+
           {/* Video and Form Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Video */}
@@ -192,17 +199,8 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Center Text between Video and Form */}
-            <div className="lg:col-span-2 text-center mb-8">
-              <p className="text-xl text-yellow-300 font-semibold">
-                Siente el llamado de tu corazón
-              </p>
-            </div>
-          </div>
-
-          {/* Form Section - Centered */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-md relative z-10">
+            {/* Right Column - Form */}
+            <div className="relative z-10">
               <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
