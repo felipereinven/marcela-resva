@@ -170,10 +170,10 @@ export default function Landing() {
               ].map((gift, index) => (
                 <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className={`${gift.icon} text-white text-2xl`}></i>
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className={`${gift.icon} text-white text-lg`}></i>
                     </div>
-                    <h3 className="text-xl font-cormorant font-bold text-white mb-3">{gift.title}</h3>
+                    <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">{gift.title}</h3>
                     <p className="text-white/90 leading-relaxed text-sm">{gift.description}</p>
                   </div>
                 </div>
