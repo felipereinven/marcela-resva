@@ -123,7 +123,7 @@ export default function Landing() {
         <div className="container mx-auto max-w-6xl">
           {/* Centered Title Section */}
           <div className="text-center mb-12">
-            <h2 className="text-2xl lg:text-3xl font-dancing-script italic leading-tight mb-4" style={{color: '#f6e3eb'}}>
+            <h2 className="text-2xl lg:text-3xl font-cormorant font-medium italic leading-tight mb-4" style={{color: '#f6e3eb'}}>
               Recibe 4 regalos al registrarte
             </h2>
             <h1 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight mb-8" style={{color: '#f6e3eb'}}>
