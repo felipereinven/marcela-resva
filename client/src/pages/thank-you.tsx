@@ -42,35 +42,43 @@ export default function ThankYou() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 md:mb-0">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-microphone text-white text-2xl"></i>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-microphone text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Audio Canalizado</h3>
+                  <p className="text-white/90 leading-relaxed text-sm">De 2 minutos y 16 segundos que la divinidad te entrega hoy. Es la apertura a que te des el permiso de abrir puertas donde antes había muros.</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">El Audio Canalizado</h3>
-                <p className="text-white/95 text-sm">De 2 minutos y 16 segundos que la divinidad te entrega hoy.</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-video text-white text-2xl"></i>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-video text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Video La Energía del Pétalo</h3>
+                  <p className="text-white/90 leading-relaxed text-sm">Es la continuidad del audio canalizado para conectar tu ser a tu voz y a tu corazón.</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">La Energía del Pétalo</h3>
-                <p className="text-white/95 text-sm">Video para conectar tu ser a tu voz y a tu corazón.</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-rocket text-white text-2xl"></i>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-rocket text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Cápsulas de Acción</h3>
+                  <p className="text-white/90 leading-relaxed text-sm">Impulsos continuos en tu bandeja de entrada que te llevarán a actuar.</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Cápsulas de Acción</h3>
-                <p className="text-white/95 text-sm">Impulsos continuos en tu bandeja de entrada que te llevarán a actuar.</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-users text-white text-2xl"></i>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-users text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Comunidad Shifting Souls</h3>
+                  <p className="text-white/90 leading-relaxed text-sm">Acceso a oportunidades exclusivas, nadie se entera antes que tú.</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Comunidad Shifting Souls</h3>
-                <p className="text-white/95 text-sm">Acceso a oportunidades exclusivas, nadie se entera antes que tú.</p>
               </div>
             </div>
           </div>
