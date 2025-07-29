@@ -3,6 +3,28 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Instagram and social media browser compatibility headers
+app.use((req, res, next) => {
+  // Allow Instagram and other social media browsers
+  res.set({
+    'X-Frame-Options': 'SAMEORIGIN',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'no-referrer-when-downgrade',
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+    'Pragma': 'no-cache',
+    'Expires': '0'
+  });
+  
+  // Handle Instagram user agent specifically
+  const userAgent = req.get('User-Agent') || '';
+  if (userAgent.includes('Instagram')) {
+    res.set('X-Instagram-Compatible', 'true');
+  }
+  
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
