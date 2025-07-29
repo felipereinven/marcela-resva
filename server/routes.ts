@@ -36,9 +36,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           body: JSON.stringify({
             email: validatedData.email,
             fields: {
-              name: validatedData.firstName,
-              last_name: validatedData.lastName || '',
-              current_moment: validatedData.currentMoment || ''
+              name: validatedData.firstName
             }
           })
         });

@@ -144,6 +144,23 @@ The application follows a spiritual wellness theme with purple/blue gradients, m
 - ✅ Added Open Graph and Twitter Card tags for better social sharing
 - ✅ Mobile-first responsive design improvements
 
+### July 29, 2025 - Complete Content Redesign per PDF Requirements
+- ✅ Updated main hero title to "Recibe 4 regalos al registrarte"
+- ✅ Added subtitle "Date el permiso de cada vez sentirte más sostenida por la vida"
+- ✅ Updated intro text about using divine tools since 2014
+- ✅ Completely redesigned 4 gifts section with exact PDF content:
+  - El Audio Canalizado (2 min 16 seg)
+  - El video La Energía del Pétalo
+  - Cápsulas de Acción
+  - Comunidad Shifting Souls
+- ✅ Changed yellow call-to-action text from "¡Regístrate aquí!" to "Siente el llamado de tu corazón"
+- ✅ Repositioned call-to-action text between video and form (centered)
+- ✅ Updated form title to "Regístrate gratis aquí"
+- ✅ Simplified form to only firstname and email fields (removed lastname and questions)
+- ✅ Updated thank you page to match new 4 gifts structure
+- ✅ Modified database schema and API to support simplified form structure
+- ✅ Updated MailerLite integration for new field structure
+
 ### Current Status
 - Landing page fully functional with spiritual theme
 - Newsletter subscription working with MailerLite sync

@@ -33,36 +33,44 @@ export default function ThankYou() {
           <div className="text-center space-y-8">
             <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <h2 className="text-3xl font-cormorant font-bold text-white mb-4">
-                ¡Ya eres parte de Shifting Souls!
+                ¡Recibiste tus 4 regalos!
               </h2>
               <p className="text-white/95 mb-6">
-                Tu transformación espiritual ha comenzado. Pronto recibirás contenido exclusivo y todo lo que necesitas para tu proceso de evolución.
+                Revisa tu email para acceder a las herramientas que te ayudarán a reconectar con tu divinidad y descubrir tu misión de vida. Tu transformación espiritual comienza ahora.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8 md:mb-0">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 md:mb-0">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-envelope text-white text-2xl"></i>
+                  <i className="fas fa-microphone text-white text-2xl"></i>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Revisa tu Email</h3>
-                <p className="text-white/95 text-sm">Recibirás un email de confirmación con los próximos pasos</p>
+                <h3 className="text-white font-semibold mb-2">El Audio Canalizado</h3>
+                <p className="text-white/95 text-sm">De 2 minutos y 16 segundos que la divinidad te entrega hoy.</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-book-open text-white text-2xl"></i>
+                  <i className="fas fa-video text-white text-2xl"></i>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Guía PDF Gratuita</h3>
-                <p className="text-white/95 text-sm">Manual con ejercicios prácticos para tu despertar espiritual</p>
+                <h3 className="text-white font-semibold mb-2">La Energía del Pétalo</h3>
+                <p className="text-white/95 text-sm">Video para conectar tu ser a tu voz y a tu corazón.</p>
               </div>
 
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-gift text-white text-2xl"></i>
+                  <i className="fas fa-rocket text-white text-2xl"></i>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Meditación Guiada</h3>
-                <p className="text-white/95 text-sm">Audio exclusivo de reconexión con tu divinidad interior</p>
+                <h3 className="text-white font-semibold mb-2">Cápsulas de Acción</h3>
+                <p className="text-white/95 text-sm">Impulsos continuos en tu bandeja de entrada que te llevarán a actuar.</p>
+              </div>
+
+              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-users text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">Comunidad Shifting Souls</h3>
+                <p className="text-white/95 text-sm">Acceso a oportunidades exclusivas, nadie se entera antes que tú.</p>
               </div>
             </div>
           </div>

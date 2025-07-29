@@ -20,9 +20,7 @@ import shiftingSoulsLogo from "@assets/IMG_0195-e1752623802409_1752623855399.web
 
 const subscriptionSchema = z.object({
   firstName: z.string().min(1, "El nombre es requerido"),
-  lastName: z.string().optional(),
   email: z.string().email("Email inválido"),
-  currentMoment: z.string().optional(),
   terms: z.boolean().refine(val => val === true, "Debes aceptar los términos")
 });
 
@@ -36,9 +34,7 @@ export default function Landing() {
     resolver: zodResolver(subscriptionSchema),
     defaultValues: {
       firstName: "",
-      lastName: "",
       email: "",
-      currentMoment: "",
       terms: false
     }
   });
@@ -127,50 +123,49 @@ export default function Landing() {
         <div className="container mx-auto max-w-6xl">
           {/* Centered Title Section */}
           <div className="text-center mb-12">
-            <h2 className="text-xl font-dancing mb-4" style={{color: '#f6e3eb'}}>Recibe 4 regalos al registrarte</h2>
             <h1 className="text-4xl lg:text-5xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
-              Transforma tu crisis espiritual en{" "}
-              <span className="font-bold drop-shadow-lg bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
-                despertar consciente
-              </span>
+              Recibe 4 regalos al registrarte
             </h1>
-            <p className="text-lg text-white/95 leading-relaxed max-w-3xl mx-auto">
-              Únete gratis y recibe herramientas poderosas para reconectar con tu divinidad y descubrir tu misión de vida.
+            <h2 className="text-2xl lg:text-3xl font-cormorant font-semibold leading-tight mb-6" style={{color: '#f6e3eb'}}>
+              Date el permiso de cada vez sentirte más sostenida por la vida
+            </h2>
+            <p className="text-lg text-white/95 leading-relaxed max-w-4xl mx-auto mb-6">
+              Desde 2014, utilizo y comparto las herramientas que la divinidad me entrega para comprender cómo darnos el permiso de transformar cada techo en un nuevo piso.
             </p>
           </div>
 
-          {/* 3 Gifts Section */}
+          {/* 4 Gifts Section */}
           <div className="mb-12">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-cormorant font-bold mb-4 text-white">
                 Regístrate hoy y recibe
               </h2>
               <p className="text-xl text-white/95 mb-8">
-                Herramientas poderosas para comenzar tu transformación espiritual hoy mismo
+                Herramientas para reconectar con tu divinidad y tu misión de vida.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               {[
                 { 
-                  icon: "fas fa-play-circle", 
-                  title: "Audio de 8 Minutos", 
-                  description: "Los 3 pilares para establecer límites y dejar de postergar la vida que anhelas" 
+                  icon: "fas fa-microphone", 
+                  title: "El Audio Canalizado", 
+                  description: "De 2 minutos y 16 segundos que la divinidad te entrega hoy. Es la apertura a que te des el permiso de abrir puertas donde antes había muros." 
+                },
+                { 
+                  icon: "fas fa-video", 
+                  title: "El video La Energía del Pétalo", 
+                  description: "Es la continuidad del audio canalizado para conectar tu ser a tu voz y a tu corazón." 
                 },
                 { 
                   icon: "fas fa-rocket", 
                   title: "Cápsulas de Acción", 
-                  description: "Impulsos continuos en tu bandeja de entrada que te llevarán a actuar" 
+                  description: "Impulsos continuos en tu bandeja de entrada que te llevarán a actuar." 
                 },
                 { 
                   icon: "fas fa-users", 
                   title: "Comunidad Shifting Souls", 
-                  description: "Acceso a oportunidades únicas en mi comunidad espiritual" 
-                },
-                { 
-                  icon: "fas fa-gift", 
-                  title: "Regalo Sorpresa", 
-                  description: "Una herramienta especial para darle la vuelta al dolor que estás viviendo" 
+                  description: "Acceso a oportunidades exclusivas, nadie se entera antes que tú." 
                 }
               ].map((gift, index) => (
                 <div key={index} className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
@@ -179,7 +174,7 @@ export default function Landing() {
                       <i className={`${gift.icon} text-white text-2xl`}></i>
                     </div>
                     <h3 className="text-xl font-cormorant font-bold text-white mb-3">{gift.title}</h3>
-                    <p className="text-white/90 leading-relaxed">{gift.description}</p>
+                    <p className="text-white/90 leading-relaxed text-sm">{gift.description}</p>
                   </div>
                 </div>
               ))}
@@ -197,59 +192,43 @@ export default function Landing() {
               </div>
             </div>
 
-            {/* Right Column - Form */}
-            <div className="relative z-10">
-              {/* Registration Call to Action - positioned above form on all devices, centered */}
-              <div className="text-center mb-6">
-                <p className="text-lg text-yellow-300 font-semibold">
-                  ¡Registrate aquí!
-                </p>
-              </div>
+            {/* Center Text between Video and Form */}
+            <div className="lg:col-span-2 text-center mb-8">
+              <p className="text-xl text-yellow-300 font-semibold">
+                Siente el llamado de tu corazón
+              </p>
+            </div>
+          </div>
+
+          {/* Form Section - Centered */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-md relative z-10">
               <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-white/60 shadow-xl">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-cormorant font-bold mb-2" style={{color: '#976e73'}}>
-                    Tu alma te está llamando
+                    Regístrate gratis aquí
                   </h3>
                 </div>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="firstName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="font-semibold" style={{color: '#976e73'}}>Nombre *</FormLabel>
-                            <FormControl>
-                              <Input 
-                                {...field}
-                                placeholder="Tu nombre"
-                                className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="lastName"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="font-semibold" style={{color: '#976e73'}}>Apellido</FormLabel>
-                            <FormControl>
-                              <Input 
-                                {...field}
-                                placeholder="Tu apellido"
-                                className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-semibold" style={{color: '#976e73'}}>Nombre *</FormLabel>
+                          <FormControl>
+                            <Input 
+                              {...field}
+                              placeholder="Tu nombre"
+                              className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                     
                     <FormField
                       control={form.control}
@@ -265,31 +244,6 @@ export default function Landing() {
                               className="bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
                             />
                           </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="currentMoment"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="font-semibold" style={{color: '#976e73'}}>¿Qué te resuena más de tu momento actual?</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger className="bg-white border-gray-300 text-gray-900 focus:ring-purple-500 focus:border-purple-500 shadow-sm">
-                                <SelectValue placeholder="Selecciona una opción" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="crisis-espiritual">Estoy en medio de una crisis espiritual</SelectItem>
-                              <SelectItem value="busco-proposito">Busco mi propósito de vida</SelectItem>
-                              <SelectItem value="conectar-angeles">Quiero conectar con mis ángeles</SelectItem>
-                              <SelectItem value="transformar-dolor">Necesito transformar mi dolor</SelectItem>
-                              <SelectItem value="comunidad-espiritual">Busco una comunidad espiritual</SelectItem>
-                            </SelectContent>
-                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
