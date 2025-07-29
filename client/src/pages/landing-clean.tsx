@@ -123,11 +123,11 @@ export default function Landing() {
         <div className="container mx-auto max-w-6xl">
           {/* Centered Title Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
-              Recibe 4 regalos al registrarte
+            <h1 className="text-5xl lg:text-6xl font-cormorant font-bold italic leading-tight mb-8" style={{color: '#f6e3eb'}}>
+              <span className="text-yellow-300">Date el permiso</span> de cada vez sentirte más sostenida por la vida
             </h1>
-            <h2 className="text-2xl lg:text-3xl font-cormorant font-semibold leading-tight mb-6" style={{color: '#f6e3eb'}}>
-              Date el permiso de cada vez sentirte más sostenida por la vida
+            <h2 className="text-3xl lg:text-4xl font-cormorant font-semibold italic leading-tight mb-6" style={{color: '#f6e3eb'}}>
+              Recibe 4 regalos al registrarte
             </h2>
             <p className="text-lg text-white/95 leading-relaxed max-w-4xl mx-auto mb-6">
               Desde 2014, utilizo y comparto las herramientas que la divinidad me entrega para comprender cómo darnos el permiso de transformar cada techo en un nuevo piso.
