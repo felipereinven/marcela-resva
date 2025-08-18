@@ -212,63 +212,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             });
 
             if (assignToGroupResponse.ok) {
-              console.log('Confirmed subscriber added to group');
-
-              // Send welcome email with gifts
-              const welcomeEmailResponse = await fetch('https://connect.mailerlite.com/api/campaigns/sends', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${mailerLiteApiKey}`,
-                  'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                  emails: [subscriber.email],
-                  subject: "Bienvenida… disfruta tus regalos",
-                  content: `
-                    <html>
-                    <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-                      <h1 style="color: #ae667d; text-align: center;">¡Bienvenida, ${subscriber.firstName}!</h1>
-                      
-                      <p style="font-size: 16px; line-height: 1.6;">Tu suscripción ha sido confirmada exitosamente.</p>
-                      
-                      <p style="font-size: 16px; line-height: 1.6;">Ahora puedes acceder a tus 4 regalos espirituales:</p>
-                      
-                      <div style="margin: 30px 0;">
-                        <h3 style="color: #ae667d;">🎁 Tus Regalos:</h3>
-                        <ul style="font-size: 16px; line-height: 1.8;">
-                          <li><strong>El Audio Canalizado</strong> (2 min 16 seg)</li>
-                          <li><strong>El video La Energía del Pétalo</strong></li>
-                          <li><strong>Cápsulas de Acción</strong></li>
-                          <li><strong>Comunidad Shifting Souls</strong></li>
-                        </ul>
-                      </div>
-                      
-                      <div style="text-align: center; margin: 30px 0;">
-                        <a href="${process.env.BASE_URL || 'http://localhost:5000'}/audio-regalo" 
-                           style="background-color: #ae667d; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; margin: 10px;">
-                          🎵 Acceder al Audio
-                        </a>
-                        <a href="${process.env.BASE_URL || 'http://localhost:5000'}/video-regalo" 
-                           style="background-color: #976e73; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block; margin: 10px;">
-                          🎥 Acceder al Video
-                        </a>
-                      </div>
-                      
-                      <p style="font-size: 16px; line-height: 1.6; margin-top: 30px;">
-                        Con amor y luz,<br>
-                        <strong style="color: #ae667d;">Marcela Resva</strong>
-                      </p>
-                    </body>
-                    </html>
-                  `,
-                  type: "regular"
-                })
-              });
-
-              if (welcomeEmailResponse.ok) {
-                console.log('Welcome email with gifts sent successfully');
-              }
+              console.log('Confirmed subscriber added to group - MailerLite automation will handle welcome email');
             }
           }
         }
