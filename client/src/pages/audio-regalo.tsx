@@ -3,9 +3,19 @@ import { Button } from '@/components/ui/button';
 import audioFile from '@assets/Regalo-_Mensaje_Canalizado__1755550542754.mp3';
 import marcelaLogo from '@assets/Marcela-ResVa-05-e1752018349922_1752620492878.webp';
 import { useLocation } from 'wouter';
+import { useEffect } from 'react';
 
 export function AudioRegalo() {
   const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const navigateWithScroll = (path: string) => {
+    setLocation(path);
+    setTimeout(() => window.scrollTo(0, 0), 100);
+  };
 
   return (
     <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
@@ -23,7 +33,7 @@ export function AudioRegalo() {
               />
             </div>
             <Button 
-              onClick={() => setLocation('/')}
+              onClick={() => navigateWithScroll('/')}
               variant="ghost"
               className="text-white/90 hover:text-white hover:bg-white/10"
             >
@@ -121,7 +131,7 @@ export function AudioRegalo() {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => setLocation('/video-regalo')}
+                onClick={() => navigateWithScroll('/video-regalo')}
                 className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg"
                 style={{
                   backgroundColor: '#f6e3eb',
@@ -140,7 +150,7 @@ export function AudioRegalo() {
                 Ver Video del Pétalo →
               </Button>
               <Button 
-                onClick={() => setLocation('/membresia')}
+                onClick={() => navigateWithScroll('/membresia')}
                 className="px-8 py-4 rounded-full font-bold border-2 text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 style={{
                   backgroundColor: 'transparent',

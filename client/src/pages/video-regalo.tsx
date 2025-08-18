@@ -2,9 +2,19 @@ import { ParticleBackground } from '@/components/ui/particles';
 import { Button } from '@/components/ui/button';
 import marcelaLogo from '@assets/Marcela-ResVa-05-e1752018349922_1752620492878.webp';
 import { useLocation } from 'wouter';
+import { useEffect } from 'react';
 
 export function VideoRegalo() {
   const [, setLocation] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const navigateWithScroll = (path: string) => {
+    setLocation(path);
+    setTimeout(() => window.scrollTo(0, 0), 100);
+  };
 
   return (
     <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
@@ -22,7 +32,7 @@ export function VideoRegalo() {
               />
             </div>
             <Button 
-              onClick={() => setLocation('/')}
+              onClick={() => navigateWithScroll('/')}
               variant="ghost"
               className="text-white/90 hover:text-white hover:bg-white/10"
             >
@@ -144,7 +154,7 @@ export function VideoRegalo() {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => setLocation('/audio-regalo')}
+                onClick={() => navigateWithScroll('/audio-regalo')}
                 className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg"
                 style={{
                   backgroundColor: '#f6e3eb',
@@ -163,7 +173,7 @@ export function VideoRegalo() {
                 ← Escuchar Audio Canalizado
               </Button>
               <Button 
-                onClick={() => setLocation('/membresia')}
+                onClick={() => navigateWithScroll('/membresia')}
                 className="px-8 py-4 rounded-full font-bold border-2 text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 style={{
                   backgroundColor: 'transparent',
