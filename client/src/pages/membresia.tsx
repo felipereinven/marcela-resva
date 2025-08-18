@@ -100,7 +100,7 @@ export default function MembresiaPage() {
               <a href="#community" className="hover:opacity-80 transition-opacity" style={{color: '#f6e3eb'}}>
                 Comunidad
               </a>
-              <a href="#newsletter-signup" className="hover:opacity-80 transition-opacity" style={{color: '#f6e3eb'}}>
+              <a href="https://academy.marcelaresva.com/step/checkout-membresia/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" style={{color: '#f6e3eb'}}>
                 Únete
               </a>
             </div>
@@ -259,7 +259,7 @@ export default function MembresiaPage() {
             
             <div className="mt-8">
               <Button 
-                onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
+                onClick={() => window.open('https://academy.marcelaresva.com/step/checkout-membresia/', '_blank')}
                 className="px-6 md:px-12 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg md:text-xl"
                 style={{
                   backgroundColor: '#f6e3eb',
@@ -361,7 +361,7 @@ export default function MembresiaPage() {
             </h2>
             
             <Button 
-              onClick={() => window.open('https://www.paypal.com/checkout', '_blank')}
+              onClick={() => window.open('https://academy.marcelaresva.com/step/checkout-membresia/', '_blank')}
               className="px-8 md:px-16 py-4 md:py-6 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg md:text-2xl"
               style={{
                 backgroundColor: '#f6e3eb',
