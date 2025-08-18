@@ -40,30 +40,30 @@ export default function ThankYou() {
           {/* Main Content */}
           <div className="relative mb-12">
             <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-            <div className="relative bg-white/25 backdrop-blur-lg rounded-3xl p-8 border border-white/40 shadow-xl" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>
+            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl lg:text-4xl font-cormorant font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
+                <h2 className="text-3xl lg:text-4xl font-cormorant font-bold leading-tight mb-6" style={{color: '#f6e3eb'}}>
                   TODAVÍA NO ESTÁS SUSCRITA EN LA LISTA
                 </h2>
-                <p className="text-xl text-white leading-relaxed mb-6 font-semibold" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.6)'}}>
+                <p className="text-xl text-white/95 leading-relaxed mb-6">
                   Solo revisa el correo que te acabo de enviar a la dirección que me dejaste y haz clic en el enlace de confirmación.
                 </p>
                 
-                <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/40 shadow-lg">
-                  <h3 className="text-lg font-bold text-yellow-300 mb-4" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>¿No lo encuentras?</h3>
-                  <p className="text-white mb-4 leading-relaxed font-semibold" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.6)'}}>
+                <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 mb-6 border border-white/30 shadow-xl">
+                  <h3 className="text-lg font-semibold text-yellow-300 mb-4">¿No lo encuentras?</h3>
+                  <p className="text-white/90 mb-4 leading-relaxed">
                     Puede estar en la carpeta de Spam, Promociones o Notificaciones.
                   </p>
-                  <p className="text-white leading-relaxed font-semibold" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.6)'}}>
+                  <p className="text-white/90 leading-relaxed">
                     También puedes probar agregando este correo a tu lista de contactos:
                     <br />
-                    <span className="font-bold text-yellow-300 text-lg" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>info@marcelaresva.com</span>
+                    <span className="font-semibold text-yellow-300 text-lg">info@marcelaresva.com</span>
                   </p>
                 </div>
 
-                <div className="bg-yellow-300/60 border-2 border-yellow-300/80 rounded-2xl p-6 backdrop-blur-sm shadow-lg">
-                  <h3 className="text-xl font-bold text-white mb-4" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>MUY IMPORTANTE</h3>
-                  <p className="text-white leading-relaxed font-semibold" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.7)'}}>
+                <div className="bg-yellow-300/20 border border-yellow-300/50 rounded-2xl p-6">
+                  <h3 className="text-xl font-bold text-yellow-300 mb-4">MUY IMPORTANTE</h3>
+                  <p className="text-white/95 leading-relaxed">
                     Una vez confirmes tu suscripción, se abrirá una nueva página donde recibirás tus regalos.
                   </p>
                 </div>
@@ -113,7 +113,7 @@ export default function ThankYou() {
               </Button>
             </div>
 
-            <p className="text-sm text-white italic max-w-xl mx-auto leading-relaxed font-semibold" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.6)'}}>
+            <p className="text-sm text-white/80 italic max-w-xl mx-auto leading-relaxed">
               *Si te has registrado con un mail que no es ninguno de estos dos, no hay problema.
               El proceso es el mismo.
             </p>
