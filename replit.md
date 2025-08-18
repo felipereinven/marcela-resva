@@ -148,6 +148,7 @@ The application follows a spiritual wellness theme with purple/blue gradients, m
 - ✅ Updated main hero title to "Recibe 4 regalos al registrarte"
 - ✅ Added subtitle "Date el permiso de cada vez sentirte más sostenida por la vida"
 - ✅ Updated intro text about using divine tools since 2014
+- ✅ Changed "cada techo en un nuevo piso" to "cada límite en expansión"
 - ✅ Completely redesigned 4 gifts section with exact PDF content:
   - El Audio Canalizado (2 min 16 seg)
   - El video La Energía del Pétalo

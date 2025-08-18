@@ -120,7 +120,7 @@ export default function Landing() {
               <span className="text-yellow-300">Date el permiso</span> de cada vez sentirte más sostenida por la vida
             </h1>
             <p className="text-lg text-white/95 leading-relaxed max-w-4xl mx-auto mb-6">
-              Desde 2014, utilizo y comparto las herramientas que la divinidad me entrega para comprender cómo darnos el permiso de transformar cada techo en un nuevo piso.
+              Desde 2014, utilizo y comparto las herramientas que la divinidad me entrega para comprender cómo darnos el permiso de transformar cada límite en expansión.
             </p>
           </div>
 
