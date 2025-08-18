@@ -46,9 +46,10 @@ export default function Landing() {
     },
     onSuccess: (data) => {
       toast({
-        title: "¡Bienvenida a Shifting Souls!",
+        title: "¡Registro exitoso!",
         description: data.message,
       });
+      // Navigate to confirmation step for double opt-in flow
       navigate("/ultimo-paso");
     },
     onError: (error: any) => {

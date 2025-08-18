@@ -16,6 +16,8 @@ export const subscribers = pgTable("subscribers", {
   currentMoment: text("current_moment"),
   subscribedAt: timestamp("subscribed_at").defaultNow(),
   mailerLiteId: text("mailer_lite_id"),
+  isConfirmed: boolean("is_confirmed").default(false),
+  confirmationToken: text("confirmation_token"),
 });
 
 export const insertUserSchema = createInsertSchema(users).pick({

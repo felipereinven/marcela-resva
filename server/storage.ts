@@ -6,7 +6,9 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createSubscriber(subscriber: InsertSubscriber): Promise<Subscriber>;
   getSubscriberByEmail(email: string): Promise<Subscriber | undefined>;
+  getSubscriberById(id: number): Promise<Subscriber | undefined>;
   updateSubscriberMailerLiteId(email: string, mailerLiteId: string): Promise<void>;
+  confirmSubscriber(id: number): Promise<void>;
 }
 
 export class MemStorage implements IStorage {
@@ -39,7 +41,7 @@ export class MemStorage implements IStorage {
     return user;
   }
 
-  async createSubscriber(insertSubscriber: InsertSubscriber): Promise<Subscriber> {
+  async createSubscriber(insertSubscriber: any): Promise<Subscriber> {
     const id = this.currentSubscriberId++;
     const subscriber: Subscriber = { 
       ...insertSubscriber,
@@ -47,7 +49,9 @@ export class MemStorage implements IStorage {
       currentMoment: insertSubscriber.currentMoment || null,
       id,
       subscribedAt: new Date(),
-      mailerLiteId: null
+      mailerLiteId: null,
+      isConfirmed: insertSubscriber.isConfirmed || false,
+      confirmationToken: insertSubscriber.confirmationToken || null
     };
     this.subscribers.set(id, subscriber);
     return subscriber;
@@ -59,11 +63,23 @@ export class MemStorage implements IStorage {
     );
   }
 
+  async getSubscriberById(id: number): Promise<Subscriber | undefined> {
+    return this.subscribers.get(id);
+  }
+
   async updateSubscriberMailerLiteId(email: string, mailerLiteId: string): Promise<void> {
     const subscriber = await this.getSubscriberByEmail(email);
     if (subscriber) {
       const updatedSubscriber = { ...subscriber, mailerLiteId };
       this.subscribers.set(subscriber.id, updatedSubscriber);
+    }
+  }
+
+  async confirmSubscriber(id: number): Promise<void> {
+    const subscriber = await this.getSubscriberById(id);
+    if (subscriber) {
+      const updatedSubscriber = { ...subscriber, isConfirmed: true };
+      this.subscribers.set(id, updatedSubscriber);
     }
   }
 }
