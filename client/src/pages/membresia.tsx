@@ -93,7 +93,7 @@ export default function MembresiaPage() {
                 Shifting Souls
               </span>
             </div>
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex space-x-6 items-center">
               <a href="#transformation" className="hover:opacity-80 transition-opacity" style={{color: '#f6e3eb'}}>
                 Membresía
               </a>
@@ -102,6 +102,10 @@ export default function MembresiaPage() {
               </a>
               <a href="https://academy.marcelaresva.com/step/checkout-membresia/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" style={{color: '#f6e3eb'}}>
                 Únete
+              </a>
+              <span className="text-white/60">|</span>
+              <a href="https://academy.marcelaresva.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity text-yellow-300 font-medium">
+                ¿Ya eres usuaria? Haz clic aquí
               </a>
             </div>
           </div>

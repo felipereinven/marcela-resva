@@ -103,17 +103,7 @@ export default function Landing() {
                 className="h-10 w-auto"
               />
             </div>
-            <div className="hidden md:flex items-center space-x-6">
-              <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-medium">
-                Sobre Mí
-              </button>
-              <button onClick={() => scrollToSection('transformation')} className="text-white/90 hover:text-white transition-colors font-medium">
-                Transformación
-              </button>
-              <button onClick={() => scrollToSection('community')} className="text-white/90 hover:text-white transition-colors font-medium">
-                Comunidad
-              </button>
-            </div>
+
           </div>
         </div>
       </nav>
