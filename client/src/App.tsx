@@ -7,6 +7,8 @@ import Landing from "@/pages/landing-clean";
 import Membresia from "@/pages/membresia";
 import ThankYou from "@/pages/thank-you";
 import NotFound from "@/pages/not-found";
+import { AudioRegalo } from "@/pages/audio-regalo";
+import { VideoRegalo } from "@/pages/video-regalo";
 
 function Router() {
   return (
@@ -14,6 +16,8 @@ function Router() {
       <Route path="/" component={Landing} />
       <Route path="/membresia" component={Membresia} />
       <Route path="/gracias" component={ThankYou} />
+      <Route path="/audio-regalo" component={AudioRegalo} />
+      <Route path="/video-regalo" component={VideoRegalo} />
       <Route component={NotFound} />
     </Switch>
   );
