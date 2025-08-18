@@ -1,86 +1,122 @@
-import { VimeoPlayer } from "@/components/ui/vimeo-player";
 import { ParticleBackground } from "@/components/ui/particles";
 import { Button } from "@/components/ui/button";
-import marcelaLogo from "@/assets/marcela-resva-logo.webp";
+import marcelaLogo from "@assets/Marcela-ResVa-05-e1752018349922_1752620492878.webp";
+import { useEffect } from 'react';
 
 export default function ThankYou() {
-  const whatsappGroupUrl = "https://chat.whatsapp.com/tu-grupo-de-whatsapp";
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
       
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-8 md:py-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-6">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/15 backdrop-blur-xl border-b border-white/30 transition-all duration-300 shadow-lg">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-center">
+            <div className="flex items-center">
               <img 
                 src={marcelaLogo} 
                 alt="Marcela ResVa Logo" 
-                className="h-16 w-auto"
+                className="h-10 w-auto"
               />
             </div>
-            <h1 className="text-5xl font-cormorant font-bold text-white mb-4">
-              ¡Bienvenida a la Comunidad!
+          </div>
+        </div>
+      </nav>
+
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-24">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
+              <span className="text-yellow-300">ÚLTIMO PASO</span>
             </h1>
-            <p className="text-xl text-white/95 mb-8">
-              Tu transformación espiritual comienza ahora. Aquí tienes un mensaje especial para ti:
-            </p>
           </div>
 
 
 
-          <div className="text-center space-y-8">
-            <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
-              <h2 className="text-3xl font-cormorant font-bold text-white mb-4">
-                ¡Recibiste tus 4 regalos!
-              </h2>
-              <p className="text-white/95 mb-6">
-                Revisa tu email para acceder a las herramientas que te ayudarán a reconectar con tu divinidad y descubrir tu misión de vida. Tu transformación espiritual comienza ahora.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 md:mb-0">
-              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-microphone text-white text-lg"></i>
-                  </div>
-                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Audio Canalizado</h3>
-                  <p className="text-white/90 leading-relaxed text-sm">De 2 minutos y 16 segundos que la divinidad te entrega hoy. Es la apertura a que te des el permiso de abrir puertas donde antes había muros.</p>
+          {/* Main Content */}
+          <div className="relative mb-12">
+            <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
+            <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
+              <div className="text-center space-y-6">
+                <h2 className="text-3xl lg:text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
+                  TODAVÍA NO ESTÁS SUSCRITA EN LA LISTA
+                </h2>
+                <p className="text-xl text-white/95 leading-relaxed mb-6">
+                  Solo revisa el correo que te acabo de enviar a la dirección que me dejaste y haz clic en el enlace de confirmación.
+                </p>
+                
+                <div className="bg-white/10 rounded-2xl p-6 mb-6">
+                  <h3 className="text-lg font-semibold text-yellow-300 mb-4">¿No lo encuentras?</h3>
+                  <p className="text-white/90 mb-4 leading-relaxed">
+                    Puede estar en la carpeta de Spam, Promociones o Notificaciones.
+                  </p>
+                  <p className="text-white/90 leading-relaxed">
+                    También puedes probar agregando este correo a tu lista de contactos:
+                    <br />
+                    <span className="font-semibold text-yellow-300">info@marcelaresva.com</span>
+                  </p>
                 </div>
-              </div>
 
-              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-video text-white text-lg"></i>
-                  </div>
-                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Video La Energía del Pétalo</h3>
-                  <p className="text-white/90 leading-relaxed text-sm">Es la continuidad del audio canalizado para conectar tu ser a tu voz y a tu corazón.</p>
-                </div>
-              </div>
-
-              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-rocket text-white text-lg"></i>
-                  </div>
-                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Cápsulas de Acción</h3>
-                  <p className="text-white/90 leading-relaxed text-sm">Impulsos continuos en tu bandeja de entrada que te llevarán a actuar.</p>
-                </div>
-              </div>
-
-              <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-6 border border-white/30 shadow-lg">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 via-pink-300 to-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-users text-white text-lg"></i>
-                  </div>
-                  <h3 className="text-xl font-cormorant font-bold text-yellow-300 mb-3">Comunidad Shifting Souls</h3>
-                  <p className="text-white/90 leading-relaxed text-sm">Acceso a oportunidades exclusivas, nadie se entera antes que tú.</p>
+                <div className="bg-yellow-300/20 border border-yellow-300/50 rounded-2xl p-6">
+                  <h3 className="text-xl font-bold text-yellow-300 mb-4">MUY IMPORTANTE</h3>
+                  <p className="text-white/95 leading-relaxed">
+                    Una vez confirmes tu suscripción, se abrirá una nueva página donde recibirás tus regalos.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Email Buttons */}
+          <div className="text-center space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+              <Button 
+                onClick={() => window.open('https://mail.google.com', '_blank')}
+                className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg flex items-center justify-center space-x-3"
+                style={{
+                  backgroundColor: '#ea4335',
+                  color: 'white',
+                  borderColor: '#ea4335'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = '#d93025';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = '#ea4335';
+                }}
+              >
+                <i className="fab fa-google text-xl"></i>
+                <span>Ir a Gmail</span>
+              </Button>
+              
+              <Button 
+                onClick={() => window.open('https://outlook.live.com', '_blank')}
+                className="px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 text-lg flex items-center justify-center space-x-3"
+                style={{
+                  backgroundColor: '#0078d4',
+                  color: 'white',
+                  borderColor: '#0078d4'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = '#106ebe';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = '#0078d4';
+                }}
+              >
+                <i className="fab fa-microsoft text-xl"></i>
+                <span>Ir a Outlook</span>
+              </Button>
+            </div>
+
+            <p className="text-sm text-white/80 italic max-w-xl mx-auto leading-relaxed">
+              *Si te has registrado con un mail que no es ninguno de estos dos, no hay problema.
+              El proceso es el mismo.
+            </p>
           </div>
         </div>
       </div>

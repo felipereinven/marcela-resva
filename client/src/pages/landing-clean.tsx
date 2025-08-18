@@ -49,7 +49,7 @@ export default function Landing() {
         title: "¡Bienvenida a Shifting Souls!",
         description: data.message,
       });
-      navigate("/gracias");
+      navigate("/ultimo-paso");
     },
     onError: (error: any) => {
       toast({

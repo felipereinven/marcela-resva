@@ -15,7 +15,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Landing} />
       <Route path="/membresia" component={Membresia} />
-      <Route path="/gracias" component={ThankYou} />
+      <Route path="/ultimo-paso" component={ThankYou} />
       <Route path="/audio-regalo" component={AudioRegalo} />
       <Route path="/video-regalo" component={VideoRegalo} />
       <Route component={NotFound} />
