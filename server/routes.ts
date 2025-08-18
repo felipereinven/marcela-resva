@@ -52,7 +52,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         console.log('Making request to MailerLite API...');
         
-        // Create subscriber in MailerLite with double opt-in
+        // Create subscriber in MailerLite with group assignment
+        const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID;
+        
         const mailerLiteResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
           method: 'POST',
           headers: {
@@ -65,7 +67,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
             fields: {
               name: validatedData.firstName
             },
-            status: 'unconfirmed', // This will require manual confirmation
+            groups: mailerLiteGroupId ? [mailerLiteGroupId] : [], // Add to Shifting Souls Community group
+            status: 'unconfirmed', // This will trigger double opt-in
             optin_ip: req.ip,
             signup_ip: req.ip
           })
@@ -80,29 +83,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
           if (mailerLiteData.data && mailerLiteData.data.id) {
             await storage.updateSubscriberMailerLiteId(validatedData.email, mailerLiteData.data.id);
             console.log(`Subscriber added to MailerLite with ID: ${mailerLiteData.data.id}`);
-            console.log('About to update MailerLite ID in storage...');
             
-            // Try to trigger confirmation email manually if automatic double opt-in is not enabled
-            try {
-              console.log('Attempting to send confirmation email manually...');
-              const confirmationResponse = await fetch(`https://connect.mailerlite.com/api/subscribers/${mailerLiteData.data.id}/confirmation`, {
-                method: 'POST',
-                headers: {
-                  'Authorization': `Bearer ${mailerLiteApiKey}`,
-                  'Accept': 'application/json'
+            // Add subscriber to group after creation
+            if (mailerLiteGroupId) {
+              try {
+                console.log(`Adding subscriber to group: ${mailerLiteGroupId}`);
+                const groupResponse = await fetch(`https://connect.mailerlite.com/api/subscribers/${mailerLiteData.data.id}/groups/${mailerLiteGroupId}`, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${mailerLiteApiKey}`,
+                    'Accept': 'application/json'
+                  }
+                });
+                
+                if (groupResponse.ok) {
+                  console.log('Subscriber successfully added to Shifting Souls Community group');
+                  console.log('MailerLite should now send confirmation email automatically');
+                } else {
+                  const groupErrorText = await groupResponse.text();
+                  console.error('Failed to add subscriber to group:', groupErrorText);
                 }
-              });
-              
-              if (confirmationResponse.ok) {
-                console.log('Manual confirmation email sent successfully');
-              } else {
-                const errorText = await confirmationResponse.text();
-                console.log('Manual confirmation failed:', errorText);
-                console.log('Note: Enable "Double opt-in for API" in MailerLite settings for automatic emails');
+              } catch (groupError) {
+                console.error('Error adding subscriber to group:', groupError);
               }
-            } catch (confirmError) {
-              console.log('Manual confirmation error:', confirmError);
-              console.log('Note: Enable "Double opt-in for API" in MailerLite settings for automatic emails');
+            } else {
+              console.error('MAILERLITE_GROUP_ID not configured');
             }
           } else {
             console.error('MailerLite response missing data.id:', mailerLiteData);
