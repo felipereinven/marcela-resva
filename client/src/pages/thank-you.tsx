@@ -38,7 +38,7 @@ export default function ThankYou() {
           {/* Main Content */}
           <div className="relative mb-12">
             <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
-            <div className="relative bg-white/40 backdrop-blur-xl rounded-3xl p-8 border border-white/50 shadow-xl">
+            <div className="relative backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-xl" style={{backgroundColor: 'rgba(151, 110, 115, 0.7)'}}>
               <div className="text-center space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-cormorant font-bold leading-tight mb-6 text-white">
                   TODAVÍA NO ESTÁS SUSCRITA EN LA LISTA
@@ -47,7 +47,7 @@ export default function ThankYou() {
                   Solo revisa el correo que te acabo de enviar a la dirección que me dejaste y haz clic en el enlace de confirmación.
                 </p>
                 
-                <div className="bg-white/40 backdrop-blur-lg rounded-2xl p-6 mb-6 border border-white/50 shadow-xl">
+                <div className="backdrop-blur-lg rounded-2xl p-6 mb-6 border border-white/30 shadow-xl" style={{backgroundColor: 'rgba(174, 102, 125, 0.7)'}}>
                   <h3 className="text-lg font-bold text-yellow-300 mb-4">¿No lo encuentras?</h3>
                   <p className="text-white mb-4 leading-relaxed font-medium">
                     Puede estar en la carpeta de Spam, Promociones o Notificaciones.
@@ -59,7 +59,7 @@ export default function ThankYou() {
                   </p>
                 </div>
 
-                <div className="bg-yellow-300/40 border-2 border-yellow-300 rounded-2xl p-6">
+                <div className="border-2 border-yellow-300 rounded-2xl p-6" style={{backgroundColor: 'rgba(176, 145, 150, 0.8)'}}>
                   <h3 className="text-xl font-bold text-yellow-300 mb-4">MUY IMPORTANTE</h3>
                   <p className="text-white leading-relaxed font-medium">
                     Una vez confirmes tu suscripción, se abrirá una nueva página donde recibirás tus regalos.
