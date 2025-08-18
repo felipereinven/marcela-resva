@@ -141,8 +141,20 @@ export function AudioRegalo() {
               </Button>
               <Button 
                 onClick={() => setLocation('/membresia')}
-                variant="outline"
-                className="px-8 py-4 rounded-full font-bold border-2 text-lg text-white border-white/50 hover:bg-white/10"
+                className="px-8 py-4 rounded-full font-bold border-2 text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: '#f6e3eb',
+                  borderColor: '#f6e3eb'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = '#f6e3eb';
+                  e.currentTarget.style.color = '#976e73';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#f6e3eb';
+                }}
               >
                 Explorar Membresía
               </Button>
