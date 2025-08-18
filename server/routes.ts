@@ -40,7 +40,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         const mailerLiteApiKey = process.env.MAILERLITE_API_KEY || process.env.VITE_MAILERLITE_API_KEY;
         const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+        
+        console.log('Starting MailerLite integration...');
+        console.log('API Key present:', !!mailerLiteApiKey);
+        console.log('API Key length:', mailerLiteApiKey ? mailerLiteApiKey.length : 0);
 
+        if (!mailerLiteApiKey) {
+          console.error('MailerLite API key is missing!');
+          throw new Error('MailerLite API key not configured');
+        }
+
+        console.log('Making request to MailerLite API...');
+        
         // Create subscriber in MailerLite with double opt-in
         const mailerLiteResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
           method: 'POST',
@@ -60,15 +71,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
           })
         });
 
+        console.log('MailerLite Response Status:', mailerLiteResponse.status);
+        
         if (mailerLiteResponse.ok) {
           const mailerLiteData = await mailerLiteResponse.json();
-          await storage.updateSubscriberMailerLiteId(validatedData.email, mailerLiteData.data.id);
-          console.log('Subscriber added to MailerLite with double opt-in');
-
-          // MailerLite will automatically send confirmation email if double opt-in is enabled in account settings
-          console.log('MailerLite subscriber created - confirmation email will be sent automatically if double opt-in is enabled');
+          console.log('MailerLite Response Data:', JSON.stringify(mailerLiteData, null, 2));
+          
+          if (mailerLiteData.data && mailerLiteData.data.id) {
+            await storage.updateSubscriberMailerLiteId(validatedData.email, mailerLiteData.data.id);
+            console.log(`Subscriber added to MailerLite with ID: ${mailerLiteData.data.id}`);
+            console.log('About to update MailerLite ID in storage...');
+            
+            // Try to trigger confirmation email manually if automatic double opt-in is not enabled
+            try {
+              console.log('Attempting to send confirmation email manually...');
+              const confirmationResponse = await fetch(`https://connect.mailerlite.com/api/subscribers/${mailerLiteData.data.id}/confirmation`, {
+                method: 'POST',
+                headers: {
+                  'Authorization': `Bearer ${mailerLiteApiKey}`,
+                  'Accept': 'application/json'
+                }
+              });
+              
+              if (confirmationResponse.ok) {
+                console.log('Manual confirmation email sent successfully');
+              } else {
+                const errorText = await confirmationResponse.text();
+                console.log('Manual confirmation failed:', errorText);
+                console.log('Note: Enable "Double opt-in for API" in MailerLite settings for automatic emails');
+              }
+            } catch (confirmError) {
+              console.log('Manual confirmation error:', confirmError);
+              console.log('Note: Enable "Double opt-in for API" in MailerLite settings for automatic emails');
+            }
+          } else {
+            console.error('MailerLite response missing data.id:', mailerLiteData);
+          }
         } else {
-          console.error('MailerLite API error:', await mailerLiteResponse.text());
+          const errorText = await mailerLiteResponse.text();
+          console.error(`MailerLite API Error (${mailerLiteResponse.status}):`, errorText);
         }
       } catch (mailerLiteError) {
         console.error('MailerLite integration error:', mailerLiteError);
