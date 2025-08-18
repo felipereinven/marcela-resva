@@ -106,12 +106,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (event.type === 'subscriber.confirmed') {
         const subscriberEmail = event.data.subscriber.email;
+        const mailerLiteSubscriberId = event.data.subscriber.id;
         
         // Find and confirm subscriber in our local storage
         const subscriber = await storage.getSubscriberByEmail(subscriberEmail);
         if (subscriber && !subscriber.isConfirmed) {
           await storage.confirmSubscriber(subscriber.id);
           console.log(`Subscriber ${subscriberEmail} confirmed via webhook`);
+          
+          // Add confirmed subscriber to the "Shifting Souls Community" group
+          try {
+            const mailerLiteApiKey = process.env.MAILERLITE_API_KEY;
+            const mailerLiteGroupId = process.env.MAILERLITE_GROUP_ID;
+            
+            if (mailerLiteApiKey && mailerLiteGroupId) {
+              const assignToGroupResponse = await fetch(`https://connect.mailerlite.com/api/subscribers/${mailerLiteSubscriberId}/groups/${mailerLiteGroupId}`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${mailerLiteApiKey}`,
+                  'Accept': 'application/json'
+                }
+              });
+
+              if (assignToGroupResponse.ok) {
+                console.log(`Confirmed subscriber ${subscriberEmail} added to Shifting Souls Community group`);
+              } else {
+                console.error('Failed to add confirmed subscriber to group:', await assignToGroupResponse.text());
+              }
+            } else {
+              console.error('MailerLite credentials not found for webhook');
+            }
+          } catch (groupError) {
+            console.error('Error adding subscriber to group:', groupError);
+          }
         }
       }
       
