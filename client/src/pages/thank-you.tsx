@@ -49,7 +49,7 @@ export default function ThankYou() {
                   Solo revisa el correo que te acabo de enviar a la dirección que me dejaste y haz clic en el enlace de confirmación.
                 </p>
                 
-                <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/60 shadow-lg">
+                <div className="bg-white/25 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/40 shadow-lg">
                   <h3 className="text-lg font-bold text-yellow-300 mb-4" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>¿No lo encuentras?</h3>
                   <p className="text-white mb-4 leading-relaxed font-semibold" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.6)'}}>
                     Puede estar en la carpeta de Spam, Promociones o Notificaciones.
