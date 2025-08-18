@@ -54,7 +54,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             fields: {
               name: validatedData.firstName
             },
-            status: 'unconfirmed', // This triggers double opt-in
+            status: 'unconfirmed', // This will require manual confirmation
             optin_ip: req.ip,
             signup_ip: req.ip
           })
@@ -65,55 +65,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           await storage.updateSubscriberMailerLiteId(validatedData.email, mailerLiteData.data.id);
           console.log('Subscriber added to MailerLite with double opt-in');
 
-          // Send custom confirmation email
-          const confirmationEmailResponse = await fetch('https://connect.mailerlite.com/api/campaigns/sends', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${mailerLiteApiKey}`,
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              emails: [validatedData.email],
-              subject: "AQUÍ CONFIRMAS TU CORREO",
-              content: `
-                <html>
-                <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-                  <h1 style="color: #ae667d; text-align: center;">¡Hola, hermosa alma!</h1>
-                  
-                  <p style="font-size: 16px; line-height: 1.6;">Debes confirmar tu correo.</p>
-                  
-                  <p style="font-size: 16px; line-height: 1.6;">Si <strong>NO</strong> te interesa, simplemente puedes ignorar este email.</p>
-                  
-                  <p style="font-size: 16px; line-height: 1.6;">Pero si <strong>SÍ</strong> te interesa, haz clic en el enlace que tienes debajo para confirmar tu registro:</p>
-                  
-                  <div style="text-align: center; margin: 30px 0;">
-                    <a href="${baseUrl}/email-confirmacion?subscriber_id=${subscriber.id}&token=${confirmationToken}" 
-                       style="background-color: #ae667d; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">
-                      👉 CONFIRMAR MI SUSCRIPCIÓN
-                    </a>
-                  </div>
-                  
-                  <p style="font-size: 14px; line-height: 1.6; margin-top: 30px;">
-                    <strong>P.D.:</strong> Haz clic en el enlace de arriba para acceder a tu regalo.
-                  </p>
-                  
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 20px;">
-                    ¡Te deseo un feliz y bendecido día!<br>
-                    <strong style="color: #ae667d;">Marcela Resva</strong>
-                  </p>
-                </body>
-                </html>
-              `,
-              type: "regular"
-            })
-          });
-
-          if (confirmationEmailResponse.ok) {
-            console.log('Confirmation email sent successfully');
-          } else {
-            console.error('Failed to send confirmation email:', await confirmationEmailResponse.text());
-          }
+          // MailerLite will automatically send confirmation email if double opt-in is enabled in account settings
+          console.log('MailerLite subscriber created - confirmation email will be sent automatically if double opt-in is enabled');
         } else {
           console.error('MailerLite API error:', await mailerLiteResponse.text());
         }
@@ -145,7 +98,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Email confirmation endpoint
+  // Webhook endpoint for MailerLite confirmations
+  app.post("/api/webhook/mailerlite", async (req, res) => {
+    try {
+      const event = req.body;
+      console.log('MailerLite webhook received:', event);
+      
+      if (event.type === 'subscriber.confirmed') {
+        const subscriberEmail = event.data.subscriber.email;
+        
+        // Find and confirm subscriber in our local storage
+        const subscriber = await storage.getSubscriberByEmail(subscriberEmail);
+        if (subscriber && !subscriber.isConfirmed) {
+          await storage.confirmSubscriber(subscriber.id);
+          console.log(`Subscriber ${subscriberEmail} confirmed via webhook`);
+        }
+      }
+      
+      res.status(200).json({ received: true });
+    } catch (error) {
+      console.error('Webhook error:', error);
+      res.status(500).json({ error: 'Webhook processing failed' });
+    }
+  });
+
+  // Manual email confirmation endpoint (for custom flow)
   app.post("/api/confirm-subscription", async (req, res) => {
     try {
       const { subscriberId, token } = req.body;
