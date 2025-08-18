@@ -42,28 +42,28 @@ export default function ThankYou() {
             <div className="absolute -inset-4 rounded-3xl blur-2xl" style={{background: 'linear-gradient(to right, rgba(178, 173, 168, 0.3), rgba(187, 165, 161, 0.3))'}}></div>
             <div className="relative bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl">
               <div className="text-center space-y-6">
-                <h2 className="text-3xl lg:text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
+                <h2 className="text-3xl lg:text-4xl font-cormorant font-bold mb-6 text-white">
                   TODAVÍA NO ESTÁS SUSCRITA EN LA LISTA
                 </h2>
-                <p className="text-xl text-white/95 leading-relaxed mb-6">
+                <p className="text-xl text-white leading-relaxed mb-6 font-medium">
                   Solo revisa el correo que te acabo de enviar a la dirección que me dejaste y haz clic en el enlace de confirmación.
                 </p>
                 
-                <div className="bg-white/10 rounded-2xl p-6 mb-6">
-                  <h3 className="text-lg font-semibold text-yellow-300 mb-4">¿No lo encuentras?</h3>
-                  <p className="text-white/90 mb-4 leading-relaxed">
+                <div className="bg-white/30 rounded-2xl p-6 mb-6 border border-white/40">
+                  <h3 className="text-lg font-bold text-yellow-300 mb-4">¿No lo encuentras?</h3>
+                  <p className="text-white mb-4 leading-relaxed font-medium">
                     Puede estar en la carpeta de Spam, Promociones o Notificaciones.
                   </p>
-                  <p className="text-white/90 leading-relaxed">
+                  <p className="text-white leading-relaxed font-medium">
                     También puedes probar agregando este correo a tu lista de contactos:
                     <br />
-                    <span className="font-semibold text-yellow-300">info@marcelaresva.com</span>
+                    <span className="font-bold text-yellow-300 text-lg">info@marcelaresva.com</span>
                   </p>
                 </div>
 
-                <div className="bg-yellow-300/20 border border-yellow-300/50 rounded-2xl p-6">
+                <div className="bg-yellow-300/30 border-2 border-yellow-300 rounded-2xl p-6">
                   <h3 className="text-xl font-bold text-yellow-300 mb-4">MUY IMPORTANTE</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <p className="text-white leading-relaxed font-medium">
                     Una vez confirmes tu suscripción, se abrirá una nueva página donde recibirás tus regalos.
                   </p>
                 </div>
@@ -113,7 +113,7 @@ export default function ThankYou() {
               </Button>
             </div>
 
-            <p className="text-sm text-white/80 italic max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm text-white italic max-w-xl mx-auto leading-relaxed font-medium">
               *Si te has registrado con un mail que no es ninguno de estos dos, no hay problema.
               El proceso es el mismo.
             </p>
