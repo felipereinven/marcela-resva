@@ -163,18 +163,23 @@ The application follows a spiritual wellness theme with purple/blue gradients, m
 - ✅ Updated MailerLite integration for new field structure
 - ✅ Removed Instagram compatibility yellow button component per user request
 
-### August 18, 2025 - Double Opt-in Implementation & Email Automation
+### August 18, 2025 - Complete Double Opt-in with MailerLite Integration
 - ✅ Implemented complete double opt-in flow with MailerLite integration
 - ✅ Created email confirmation page (/email-confirmacion) with token validation
 - ✅ Created "email already confirmed" page (/email-ya-confirmado) per user specifications
 - ✅ Updated database schema with isConfirmed and confirmationToken fields
 - ✅ Enhanced storage interface with getSubscriberById and confirmSubscriber methods
-- ✅ Automated email workflow:
-  - Step 1: Custom confirmation email sent with exact user-specified content
-  - Step 2: Welcome email with gifts access sent after confirmation
+- ✅ MailerLite double opt-in configuration:
+  - Configured automatic confirmation emails in MailerLite account settings
+  - Custom email template "AQUÍ CONFIRMAS TU CORREO" with user's exact content
+  - Thank you page redirects to /email-ya-confirmado
+- ✅ Webhook integration active:
+  - URL: https://marcelaresva.com/api/webhook/mailerlite
+  - Events: subscriber.active, subscriber.created, subscriber.updated, etc.
+  - Automatic group assignment to "Shifting Souls Community" on confirmation
 - ✅ Updated subscription flow to redirect to /ultimo-paso for confirmation instructions
 - ✅ Enhanced glassmorphism backgrounds with darker, more opaque styling for better text contrast
-- ✅ Full Spanish language email templates matching user's brand voice
+- ✅ Full automation: registration → MailerLite email → confirmation → webhook → group assignment → welcome automation
 
 ### Current Status
 - Landing page fully functional with spiritual theme
