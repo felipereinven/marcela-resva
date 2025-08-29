@@ -279,9 +279,98 @@ export default function MembresiaPage() {
                   e.currentTarget.style.color = '#976e73';
                 }}
               >
-                <span className="block sm:hidden">Únete - $33.99/mes</span>
-                <span className="hidden sm:block">Únete a Shifting Souls - $33.99/mes</span>
+                <span className="block sm:hidden">Únete a la Comunidad</span>
+                <span className="hidden sm:block">Únete a la Comunidad</span>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-8 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-cormorant font-bold mb-6" style={{color: '#f6e3eb'}}>
+              MODALIDADES Y COSTOS DE MEMBRESÍA
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {/* Monthly Plan */}
+              <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border border-white/30 shadow-xl hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="text-center">
+                  <h3 className="text-2xl font-cormorant font-bold mb-4 text-white">
+                    Mensual
+                  </h3>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-yellow-300">USD $33.99</span>
+                    <span className="text-white/80 text-lg block">por mes</span>
+                  </div>
+                  <p className="text-white/90 mb-6">
+                    Flexibilidad total para tu transformación espiritual
+                  </p>
+                  <Button 
+                    onClick={() => window.open('https://academy.marcelaresva.com/step/checkout-membresia/', '_blank')}
+                    className="w-full py-3 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2"
+                    style={{
+                      backgroundColor: '#f6e3eb',
+                      color: '#976e73',
+                      borderColor: '#f6e3eb'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = '#bba5a1';
+                      e.currentTarget.style.color = '#f6e3eb';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = '#f6e3eb';
+                      e.currentTarget.style.color = '#976e73';
+                    }}
+                  >
+                    Unirme a la Comunidad
+                  </Button>
+                </div>
+              </div>
+
+              {/* Semestral Plan */}
+              <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border-2 border-yellow-300/50 shadow-xl hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-300 text-black px-4 py-2 rounded-full text-sm font-bold">
+                    AHORRA 1 MES
+                  </span>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-2xl font-cormorant font-bold mb-4 text-white">
+                    Semestral
+                  </h3>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-yellow-300">USD $169.95</span>
+                    <span className="text-white/80 text-lg block">por 6 meses</span>
+                    <span className="text-white/60 text-sm line-through">$203.94</span>
+                  </div>
+                  <p className="text-white/90 mb-6">
+                    Compromiso profundo con tu crecimiento espiritual
+                  </p>
+                  <Button 
+                    onClick={() => window.open('https://academy.marcelaresva.com/step/checkout-membresia/', '_blank')}
+                    className="w-full py-3 rounded-full font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2"
+                    style={{
+                      backgroundColor: '#f6e3eb',
+                      color: '#976e73',
+                      borderColor: '#f6e3eb'
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = '#bba5a1';
+                      e.currentTarget.style.color = '#f6e3eb';
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = '#f6e3eb';
+                      e.currentTarget.style.color = '#976e73';
+                    }}
+                  >
+                    Unirme a la Comunidad
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -295,7 +384,7 @@ export default function MembresiaPage() {
               Lo que recibirás en Shifting Souls
             </h2>
             <p className="text-xl mb-6 text-white">
-              Una comunidad sagrada por solo <span className="font-bold text-yellow-300">$33.99/mes</span>
+              Una comunidad sagrada de transformación espiritual
             </p>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
@@ -381,8 +470,8 @@ export default function MembresiaPage() {
                 e.currentTarget.style.color = '#976e73';
               }}
             >
-              <span className="block sm:hidden">Unirme - $33.99/mes</span>
-              <span className="hidden sm:block">Unirme a Shifting Souls - $33.99/mes</span>
+              <span className="block sm:hidden">Unirme a la Comunidad</span>
+              <span className="hidden sm:block">Unirme a la Comunidad</span>
             </Button>
           </div>
         </div>
