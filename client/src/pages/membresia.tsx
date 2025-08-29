@@ -335,7 +335,7 @@ export default function MembresiaPage() {
               <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-8 border-2 border-yellow-300/50 shadow-xl hover:bg-white/25 transition-all duration-300 hover:transform hover:scale-105 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-yellow-300 text-black px-4 py-2 rounded-full text-sm font-bold">
-                    AHORRA 1 MES
+                    Popular
                   </span>
                 </div>
                 <div className="text-center">
@@ -348,7 +348,7 @@ export default function MembresiaPage() {
                     <span className="text-white/60 text-sm line-through">$203.94</span>
                   </div>
                   <p className="text-white/90 mb-6">
-                    Compromiso profundo con tu crecimiento espiritual
+                    Compromiso profundo con tu crecimiento espiritual • Ahorra 1 mes
                   </p>
                   <Button 
                     onClick={() => window.open('https://academy.marcelaresva.com/step/checkout-membresia/', '_blank')}
