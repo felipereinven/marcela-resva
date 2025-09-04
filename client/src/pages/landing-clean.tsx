@@ -110,7 +110,7 @@ export default function Landing() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-4 px-4 relative z-10">
+      <section className="pt-32 pb-4 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           {/* Centered Title Section */}
           <div className="text-center mb-12">
