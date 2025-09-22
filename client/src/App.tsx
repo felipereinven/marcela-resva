@@ -11,6 +11,7 @@ import { AudioRegalo } from "@/pages/audio-regalo";
 import { VideoRegalo } from "@/pages/video-regalo";
 import EmailConfirmacion from "@/pages/email-confirmacion";
 import EmailYaConfirmado from "@/pages/email-ya-confirmado";
+import Citas from "@/pages/citas";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/video-regalo" component={VideoRegalo} />
       <Route path="/email-confirmacion" component={EmailConfirmacion} />
       <Route path="/email-ya-confirmado" component={EmailYaConfirmado} />
+      <Route path="/citas" component={Citas} />
       <Route component={NotFound} />
     </Switch>
   );
