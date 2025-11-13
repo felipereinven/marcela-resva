@@ -12,18 +12,20 @@ import { VideoRegalo } from "@/pages/video-regalo";
 import EmailConfirmacion from "@/pages/email-confirmacion";
 import EmailYaConfirmado from "@/pages/email-ya-confirmado";
 import Citas from "@/pages/citas";
+import Eventos from "@/pages/eventos";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
       <Route path="/membresia" component={Membresia} />
+      <Route path="/eventos" component={Eventos} />
+      <Route path="/citas" component={Citas} />
       <Route path="/ultimo-paso" component={ThankYou} />
       <Route path="/audio-regalo" component={AudioRegalo} />
       <Route path="/video-regalo" component={VideoRegalo} />
       <Route path="/email-confirmacion" component={EmailConfirmacion} />
       <Route path="/email-ya-confirmado" component={EmailYaConfirmado} />
-      <Route path="/citas" component={Citas} />
       <Route component={NotFound} />
     </Switch>
   );
