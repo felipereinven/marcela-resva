@@ -20,6 +20,8 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
+  log("Setting up Vite middleware...", "vite");
+  
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
@@ -39,6 +41,8 @@ export async function setupVite(app: Express, server: Server) {
     server: serverOptions,
     appType: "custom",
   });
+  
+  log("Vite server created successfully", "vite");
 
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
