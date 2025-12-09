@@ -216,7 +216,7 @@ export default function Eventos() {
               background: "linear-gradient(to right, #ae667d, #976e73)",
               boxShadow: "0 10px 25px rgba(174, 102, 125, 0.3)"
             }}
-            onClick={() => window.location.href = "mailto:contacto@marcelaresva.com"}
+            onClick={() => window.open("https://www.instagram.com/shiftingsouls/", "_blank")}
           >
             CONTACTANOS
           </Button>
