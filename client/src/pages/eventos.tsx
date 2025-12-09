@@ -1,14 +1,54 @@
+import { useState } from "react";
 import { ParticleBackground } from "@/components/ui/particles";
 import { Button } from "@/components/ui/button";
+import { Lightbox } from "@/components/ui/lightbox";
 import marcelaLogo from "@/assets/marcela-resva-logo.webp";
 import marcelaPhoto from "@/assets/22_1752622341890.jpg";
 import shiftingSoulsLogo from "@assets/IMG_0195-e1752623802409_1752623855399.webp";
 import { Calendar, MapPin } from "lucide-react";
 
+// Importar imágenes del evento de México
+import eventoMx1 from "@/assets/2857d4d0-a9ed-455e-94c9-015e80484f55.jpeg";
+import eventoMx2 from "@/assets/82222DD4-21E5-476A-86B7-A6647760AC90-904-000000EC2DC2FBD8.jpeg";
+import eventoMx3 from "@/assets/IMG_5832.jpeg";
+import eventoMx4 from "@/assets/IMG_5870.jpeg";
+import eventoMx5 from "@/assets/IMG_5872.jpeg";
+import eventoMx6 from "@/assets/IMG_5880.jpeg";
+import eventoMx7 from "@/assets/IMG_5882.jpeg";
+import eventoMx8 from "@/assets/IMG_5901.jpeg";
+import eventoMx9 from "@/assets/IMG_5915.jpeg";
+
 export default function Eventos() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const galleryImages = [
+    { src: eventoMx1, alt: "Evento México - Momento 1" },
+    { src: eventoMx2, alt: "Evento México - Momento 2" },
+    { src: eventoMx3, alt: "Evento México - Momento 3" },
+    { src: eventoMx4, alt: "Evento México - Momento 4" },
+    { src: eventoMx5, alt: "Evento México - Momento 5" },
+    { src: eventoMx6, alt: "Evento México - Momento 6" },
+    { src: eventoMx7, alt: "Evento México - Momento 7" },
+    { src: eventoMx8, alt: "Evento México - Momento 8" },
+    { src: eventoMx9, alt: "Evento México - Momento 9" }
+  ];
+
+  const openLightbox = (index: number) => {
+    setSelectedImageIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="min-h-screen font-poppins" style={{background: "linear-gradient(135deg, #976e73 0%, #ae667d 50%, #b09196 100%)"}}>
       <ParticleBackground />
+      
+      <Lightbox
+        images={galleryImages}
+        initialIndex={selectedImageIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
       
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/15 backdrop-blur-xl border-b border-white/30 transition-all duration-300 shadow-lg">
@@ -117,7 +157,7 @@ export default function Eventos() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
               <img 
-                src={marcelaPhoto} 
+                src={eventoMx6} 
                 alt="Evento Ciudad de México" 
                 className="w-full h-auto object-cover"
               />
@@ -139,12 +179,16 @@ export default function Eventos() {
           </div>
 
           {/* Galería */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {galleryImages.map((image, index) => (
+              <div 
+                key={index} 
+                className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                onClick={() => openLightbox(index)}
+              >
                 <img 
-                  src={marcelaPhoto} 
-                  alt={`Evento pasado ${item}`} 
+                  src={image.src} 
+                  alt={image.alt} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
