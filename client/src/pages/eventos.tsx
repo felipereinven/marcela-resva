@@ -90,9 +90,6 @@ export default function Eventos() {
           </p>
           <div className="text-white/95 leading-relaxed space-y-6 text-lg">
             <p>
-              Estoy creando espacios sagrados donde el alma pueda recordar su verdad, abrirse al amor y recibir la guía del cielo. Cada evento nace desde una profunda conexión con lo divino y con el propósito de acompañarte en tu camino de sanación, despertar y expansión.
-            </p>
-            <p>
               A lo largo del año, comparto experiencias presenciales que ocurren en distintas ciudades y lugares del alma. Espacios donde nos encontramos para sanar, conectar y transformar la energía juntos.
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 my-8 border border-white/20">
@@ -201,7 +198,7 @@ export default function Eventos() {
       <section className="py-20 px-4 relative z-10 bg-white/10 backdrop-blur-md">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl lg:text-5xl font-cormorant font-bold text-white mb-6">
-            Lleva La Luz A Tu Comunidad Con Marcela Restrepo
+            Lleva La Luz A Tu Comunidad Con Marcela Resva
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             ¿Te gustaría organizar un evento con Marcela Restrepo en tu ciudad, tu empresa o tu espacio de transformación?
